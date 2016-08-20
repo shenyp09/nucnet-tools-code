@@ -43,7 +43,7 @@
 #include <Libnucnet__Nuc.h>
 #include <Libstatmech.h>
 #include <gsl/gsl_roots.h>
-
+ 
 /*##############################################################################
 // Use extern "C" for C++ compilers.
 //############################################################################*/
@@ -171,9 +171,9 @@ typedef struct _Libnuceq__Cluster Libnuceq__Cluster;
 //############################################################################*/
 
 typedef
-double
-( *Libnuceq__Cluster__constraint_function )
-( Libnuceq__Species *, void * );
+  double
+  ( *Libnuceq__Cluster__constraint_function )
+  ( Libnuceq__Species *, void * );
 
 /*##############################################################################
 // <user_routine name="Libnuceq__Cluster_prefactor_function()">
@@ -227,7 +227,7 @@ double
 //     />
 //
 //     <doc kind="post" id="result">
-//       User's routine must return the contribution to the cluster
+//       User's routine must return the contribution to the cluster 
 //       prefactor.
 //     </doc>
 //
@@ -240,9 +240,9 @@ double
 //############################################################################*/
 
 typedef
-double
-( *Libnuceq__Cluster__prefactorFunction )
-( Libnuceq__Cluster *, Libnuceq__Species *, void * );
+  double
+  ( *Libnuceq__Cluster__prefactorFunction )
+  ( Libnuceq__Cluster *, Libnuceq__Species *, void * );
 
 /*##############################################################################
 // <user_routine name="Libnuceq__wseCorrectionFunction()">
@@ -303,9 +303,9 @@ double
 //############################################################################*/
 
 typedef
-double
-( *Libnuceq__wseCorrectionFunction )
-( Libnuceq *, void * );
+  double
+  ( *Libnuceq__wseCorrectionFunction )
+  ( Libnuceq *, void * );
 
 /*##############################################################################
 // Structures.
@@ -329,19 +329,19 @@ double
 //       <author userid="mbradle" start_date="2010/05/18"/>
 //     </current>
 //   </authors>
-//
+//   
 //   <compatibility>
 //     Compiled successfully in gcc (GCC) 3.4.0.
 //   </compatibility>
-//
+//   
 // </class>
 //############################################################################*/
 
 struct _Libnuceq__Species {
-    double dNseFactor;
-    double dNseCorrectionFactor;
-    double dAbundance;
-    Libnucnet__Species *pNucSpecies;
+  double dNseFactor;
+  double dNseCorrectionFactor;
+  double dAbundance;
+  Libnucnet__Species *pNucSpecies;
 };
 
 /*##############################################################################
@@ -362,32 +362,32 @@ struct _Libnuceq__Species {
 //       <author userid="mbradle" start_date="2007/12/18"/>
 //     </current>
 //   </authors>
-//
+//   
 //   <compatibility>
 //     Compiled successfully in gcc (GCC) 3.4.0.
 //   </compatibility>
-//
+//   
 // </class>
 //############################################################################*/
 
 struct _Libnuceq {
-    Libnucnet__Nuc *pNuc;
-    xmlHashTablePtr pSpeciesHash;
-    xmlHashTablePtr pClusterHash;
-    Libnucnet__Species__nseCorrectionFactorFunction pfCorr;
-    void *pCorrData;
-    Libstatmech__Fermion__Function pfElectronFunction;
-    Libstatmech__Fermion__Integrand pfElectronIntegrand;
-    Libnuceq__wseCorrectionFunction pfWseCorrectionFunction;
-    void *pElectronFunctionData;
-    void *pElectronIntegrandData;
-    void *pWseCorrectionFunctionData;
-    double dT9;
-    double dRho;
-    double *pYe;
-    double dMunkT;
-    double dMupkT;
-    double *pMuekT;
+  Libnucnet__Nuc *pNuc;
+  xmlHashTablePtr pSpeciesHash;
+  xmlHashTablePtr pClusterHash;
+  Libnucnet__Species__nseCorrectionFactorFunction pfCorr;
+  void *pCorrData;
+  Libstatmech__Fermion__Function pfElectronFunction;
+  Libstatmech__Fermion__Integrand pfElectronIntegrand;
+  Libnuceq__wseCorrectionFunction pfWseCorrectionFunction;
+  void *pElectronFunctionData;
+  void *pElectronIntegrandData;
+  void *pWseCorrectionFunctionData;
+  double dT9;
+  double dRho;
+  double *pYe;
+  double dMunkT;
+  double dMupkT;
+  double *pMuekT;
 };
 
 /*##############################################################################
@@ -409,23 +409,23 @@ struct _Libnuceq {
 //       <author userid="mbradle" start_date="2010/05/18"/>
 //     </current>
 //   </authors>
-//
+//   
 //   <compatibility>
 //     Compiled successfully in gcc (GCC) 3.4.0.
 //   </compatibility>
-//
+//   
 // </class>
 //############################################################################*/
 
 struct _Libnuceq__Cluster {
-    Libnuceq *pEquil;
-    xmlChar *sxXPath;
-    double dConstraint, dMukT;
-    xmlHashTablePtr pSpeciesHash;
-    Libnuceq__Cluster__constraint_function pfConstraintFunction;
-    void *pConstraintData;
-    Libnuceq__Cluster__prefactorFunction pfPrefactorFunction;
-    void *pPrefactorData;
+  Libnuceq *pEquil;
+  xmlChar *sxXPath;
+  double dConstraint, dMukT;
+  xmlHashTablePtr pSpeciesHash;
+  Libnuceq__Cluster__constraint_function pfConstraintFunction;
+  void *pConstraintData;
+  Libnuceq__Cluster__prefactorFunction pfPrefactorFunction;
+  void *pPrefactorData;
 };
 
 /*##############################################################################
@@ -614,7 +614,7 @@ typedef double ( *Libnuceq__solve_function )( double, void * );
 
 Libnuceq *
 Libnuceq__new(
-    Libnucnet__Nuc *
+  Libnucnet__Nuc *
 );
 
 /*##############################################################################
@@ -812,9 +812,9 @@ Libnuceq__getNuc( Libnuceq * );
 
 void
 Libnuceq__computeEquilibrium(
-    Libnuceq *,
-    double,
-    double
+  Libnuceq *,
+  double,
+  double
 );
 
 /*##############################################################################
@@ -1035,9 +1035,9 @@ Libnuceq__Species__getAbundance( Libnuceq__Species * );
 
 void
 Libnuceq__iterateSpecies(
-    const Libnuceq *,
-    Libnuceq__Species__iterateFunction,
-    void *
+  const Libnuceq *,
+  Libnuceq__Species__iterateFunction,
+  void *
 );
 
 /*##############################################################################
@@ -1187,9 +1187,9 @@ Libnuceq__Species__getNucSpecies( Libnuceq__Species * );
 
 void
 Libnuceq__Cluster__iterateSpecies(
-    const Libnuceq__Cluster *,
-    Libnuceq__Species__iterateFunction,
-    void *
+  const Libnuceq__Cluster *,
+  Libnuceq__Species__iterateFunction,
+  void *
 );
 
 /*##############################################################################
@@ -1252,7 +1252,7 @@ Libnuceq__Cluster__iterateSpecies(
 
 size_t
 Libnuceq__getNumberOfClusters(
-    const Libnuceq *
+  const Libnuceq *
 );
 
 /*##############################################################################
@@ -1322,8 +1322,8 @@ Libnuceq__getNumberOfClusters(
 
 void
 Libnuceq__setYe(
-    Libnuceq *,
-    double
+  Libnuceq *,
+  double
 );
 
 /*##############################################################################
@@ -1457,8 +1457,8 @@ Libnuceq__clearYe( Libnuceq * );
 
 Libnuceq__Cluster *
 Libnuceq__newCluster(
-    Libnuceq *,
-    const char *
+  Libnuceq *,
+  const char *
 );
 
 /*##############################################################################
@@ -1535,8 +1535,8 @@ Libnuceq__newCluster(
 
 int
 Libnuceq__removeCluster(
-    Libnuceq *,
-    Libnuceq__Cluster *
+  Libnuceq *,
+  Libnuceq__Cluster *
 );
 
 /*##############################################################################
@@ -2200,7 +2200,7 @@ Libnuceq__Cluster__getXPathString( const Libnuceq__Cluster * );
 
 double
 Libnuceq__Cluster__getConstraint(
-    const Libnuceq__Cluster *
+  const Libnuceq__Cluster *
 );
 
 /*##############################################################################
@@ -2271,8 +2271,8 @@ Libnuceq__Cluster__getConstraint(
 
 void
 Libnuceq__Cluster__updateConstraint(
-    Libnuceq__Cluster *,
-    double
+  Libnuceq__Cluster *,
+  double
 );
 
 /*##############################################################################
@@ -2355,9 +2355,9 @@ Libnuceq__Cluster__updateConstraint(
 
 void
 Libnuceq__Cluster__updateConstraintFunction(
-    Libnuceq__Cluster *,
-    Libnuceq__Cluster__constraint_function,
-    void *
+  Libnuceq__Cluster *,
+  Libnuceq__Cluster__constraint_function,
+  void *
 );
 
 /*##############################################################################
@@ -2440,9 +2440,9 @@ Libnuceq__Cluster__updateConstraintFunction(
 
 void
 Libnuceq__Cluster__updatePrefactorFunction(
-    Libnuceq__Cluster *,
-    Libnuceq__Cluster__prefactorFunction,
-    void *
+  Libnuceq__Cluster *,
+  Libnuceq__Cluster__prefactorFunction,
+  void *
 );
 
 /*##############################################################################
@@ -2589,9 +2589,9 @@ Libnuceq__getAbundances( const Libnuceq * );
 
 void
 Libnuceq__iterateClusters(
-    Libnuceq *,
-    Libnuceq__Cluster__iterateFunction,
-    void *
+  Libnuceq *,
+  Libnuceq__Cluster__iterateFunction,
+  void *
 );
 
 /*##############################################################################
@@ -2655,7 +2655,7 @@ Libnuceq__iterateClusters(
 //
 //     <doc kind="example" id="example">
 //       <synopsis>
-//         For equilibrium p_my_equil, set the correction factor function
+//         For equilibrium p_my_equil, set the correction factor function 
 //         to my_correction_function and set the associated data to point to the
 //         data structure my_data:
 //       </synopsis>
@@ -2676,9 +2676,9 @@ Libnuceq__iterateClusters(
 
 void
 Libnuceq__setNseCorrectionFactorFunction(
-    Libnuceq *,
-    Libnucnet__Species__nseCorrectionFactorFunction,
-    void *
+  Libnuceq *,
+  Libnucnet__Species__nseCorrectionFactorFunction,
+  void *
 );
 
 /*##############################################################################
@@ -2726,7 +2726,7 @@ Libnuceq__setNseCorrectionFactorFunction(
 //
 //     <doc kind="example" id="example">
 //       <synopsis>
-//         For equilibrium p_my_equil, clear the correction factor function:
+//         For equilibrium p_my_equil, clear the correction factor function: 
 //       </synopsis>
 //
 //       <code>
@@ -2743,7 +2743,7 @@ Libnuceq__setNseCorrectionFactorFunction(
 
 void
 Libnuceq__clearNseCorrectionFactorFunction(
-    Libnuceq *
+  Libnuceq *
 );
 
 /*##############################################################################
@@ -2818,8 +2818,8 @@ Libnuceq__clearNseCorrectionFactorFunction(
 
 double
 Libnuceq__computeZMoment(
-    const Libnuceq *,
-    unsigned int
+  const Libnuceq *,
+  unsigned int
 );
 
 /*##############################################################################
@@ -2908,7 +2908,7 @@ Libnuceq__computeZMoment(
 
 double
 Libnuceq__computeAMoment(
-    const Libnuceq *, unsigned int
+  const Libnuceq *, unsigned int
 );
 
 /*##############################################################################
@@ -3143,11 +3143,11 @@ Libnuceq__Cluster__getNumberOfSpecies( const Libnuceq__Cluster * );
 
 void
 Libnuceq__updateUserElectronNumberDensity(
-    Libnuceq *,
-    Libstatmech__Fermion__Function,
-    Libstatmech__Fermion__Integrand,
-    void *,
-    void *
+  Libnuceq *,
+  Libstatmech__Fermion__Function,
+  Libstatmech__Fermion__Integrand,
+  void *,
+  void *
 );
 
 /*##############################################################################
@@ -3230,9 +3230,9 @@ Libnuceq__updateUserElectronNumberDensity(
 
 void
 Libnuceq__updateWseCorrectionFunction(
-    Libnuceq *,
-    Libnuceq__wseCorrectionFunction,
-    void *
+  Libnuceq *,
+  Libnuceq__wseCorrectionFunction,
+  void *
 );
 
 /*##############################################################################
@@ -3303,8 +3303,8 @@ Libnuceq__updateWseCorrectionFunction(
 
 void
 Libnuceq__copy_clusters(
-    Libnuceq *,
-    Libnuceq *
+  Libnuceq *,
+  Libnuceq *
 );
 
 /*##############################################################################
@@ -3313,13 +3313,13 @@ Libnuceq__copy_clusters(
 
 Libnuceq__Species *
 Libnuceq__Species__new(
-    Libnucnet__Species *
+  Libnucnet__Species *
 );
 
 void
 Libnuceq__Species__free(
-    Libnuceq__Species *,
-    xmlChar *
+  Libnuceq__Species *,
+  xmlChar *
 );
 
 void
@@ -3327,9 +3327,9 @@ Libnuceq__setSpeciesNseFactors( Libnuceq * );
 
 void
 Libnuceq__setSpeciesNseFactorsCallback(
-    Libnuceq__Species *,
-    Libnuceq *,
-    xmlChar *
+  Libnuceq__Species *,
+  Libnuceq *,
+  xmlChar *
 );
 
 void
@@ -3337,64 +3337,64 @@ Libnuceq__setSpeciesNseCorrectionFactors( Libnuceq * );
 
 void
 Libnuceq__setSpeciesNseCorrectionFactorsCallback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__Species__zeroNseCorrectionFactor(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 double
 Libnuceq__solveEquilibrium( Libnuceq__solve_function, void * );
 
 double
-Libnuceq__A_function(
-    double,
-    void *
+Libnuceq__A_function( 
+  double,
+  void *
 );
 
 double
-Libnuceq__WSE_function(
-    double,
-    void *
+Libnuceq__WSE_function( 
+  double,
+  void *
 );
 
 double
-Libnuceq__NSE_function(
-    double,
-    void *
+Libnuceq__NSE_function( 
+  double,
+  void *
 );
 
 void
 Libnuceq__assign_species(
-    Libnucnet__Species *,
-    Libnuceq *,
-    xmlChar *
+  Libnucnet__Species *,
+  Libnuceq *,
+  xmlChar *
 );
 
 double
 Libnuceq__computeSpeciesBaseLogAbundance(
-    Libnuceq *,
-    Libnuceq__Species *
+  Libnuceq *,
+  Libnuceq__Species *
 );
 
 void
 Libnuceq__A_function_callback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__function2_callback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 Libnuceq__Species **
@@ -3405,20 +3405,20 @@ Libnuceq__Cluster__createSpeciesArray ( const Libnuceq__Cluster * );
 
 void
 Libnuceq__create_species_array_callback(
-    Libnuceq__Species *,
-    void *,
-    const xmlChar *
+  Libnuceq__Species *,
+  void *,
+  const xmlChar *
 );
 
 int
 Libnuceq__sorter(
-    const void *,
-    const void *
+  const void *,
+  const void *
 );
 
 int
 Libnuceq__bracket_root_of_function(
-    gsl_function, double *, double *, void *
+  gsl_function, double *, double *, void *
 );
 
 void
@@ -3426,15 +3426,15 @@ Libnuceq__Cluster__hash_free( Libnuceq__Cluster *, xmlChar * );
 
 void
 Libnuceq__assignSpeciesToCluster(
-    Libnuceq *,
-    Libnuceq__Cluster *
+  Libnuceq *,
+  Libnuceq__Cluster *
 );
 
 void
 Libnuceq__assignSpeciesToClusterCallback(
-    Libnucnet__Species *,
-    void *,
-    xmlChar *
+  Libnucnet__Species *,
+  void *,
+  xmlChar *
 );
 
 void
@@ -3442,86 +3442,86 @@ Libnuceq__computeAbundances( Libnuceq * );
 
 void
 Libnuceq__computeAbundancesCallback(
-    Libnuceq__Species *,
-    Libnuceq *,
-    xmlChar *
+  Libnuceq__Species *,
+  Libnuceq *,
+  xmlChar *
 );
 
 void
 Libnuceq__set_cluster_abundances_to_zero(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__compute_cluster_abundances(
-    Libnuceq__Cluster *,
-    void *,
-    xmlChar *
+  Libnuceq__Cluster *,
+  void *,
+  xmlChar *
 );
 
 double
 Libnuceq__cluster_abundance_function(
-    double,
-    Libnuceq__Cluster *
+  double,
+  Libnuceq__Cluster *
 );
 
 void
 Libnuceq__cluster_abundance_function_callback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__computeZMomentCallback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__computeAMomentCallback(
-    Libnuceq__Species *,
-    void *,
-    xmlChar *
+  Libnuceq__Species *,
+  void *,
+  xmlChar *
 );
 
 void
 Libnuceq__getAbundancesCallback(
-    Libnuceq__Species *,
-    gsl_vector *,
-    xmlChar *
+  Libnuceq__Species *,
+  gsl_vector *,
+  xmlChar *
 );
 
 void
 Libnuceq__iterateClustersHelper(
-    Libnuceq__Cluster *,
-    void *,
-    xmlChar *
+  Libnuceq__Cluster *,
+  void *,
+  xmlChar *
 );
 
 double
 Libnuceq__computeElectronNumberDensity(
-    Libnuceq *
+  Libnuceq *
 );
 
 void
 Libnuceq__initializeMuekT(
-    Libnuceq *
+  Libnuceq *
 );
 
 int
 Libnuceq__copy_species_to_new_cluster(
-    Libnuceq__Species *,
-    Libnuceq__Cluster *
+  Libnuceq__Species *,
+  Libnuceq__Cluster *
 );
 
 int
 Libnuceq__copy_cluster(
-    Libnuceq__Cluster *,
-    Libnuceq *
+  Libnuceq__Cluster *,
+  Libnuceq *
 );
 
 #ifdef __cplusplus
