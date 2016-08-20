@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+   Copyright (c) 2015 Clemson University.
+  
+   This file was originally written by Bradley S. Meyer.
+  
+   This is free software; you can redistribute it and or modify it
+   under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+  
+   This software is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+  
+   You should have received a copy of the GNU General Public License
+   along with this software; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+   USA
+                                                                                
+  /**
+  * \file
+  * \brief An xml file for global strings.
+  */
+-->
+
+<strings>
+
+  <string>
+     <key>s_ANTI_NEUTRINO_E</key>
+     <key_string>anti-neutrino_e</key_string>
+     <doc>String for denoting an electron-type anti-neutrino.</doc>
+  </string>
+
+  <string>
+     <key>s_ARROW</key>
+     <key_string>Arrow</key_string>
+     <doc>String for denoting the arrow matrix solver.</doc>
+  </string>
+
+  <string>
+     <key>s_ARROW_WIDTH</key>
+     <key_string>Arrow width</key_string>
+     <doc>String for denoting the wing width for the arrow matrix solver.</doc>
+  </string>
+
+  <string>
+     <key>s_AVERAGE_ENERGY_NU_E</key>
+     <key_string>av nu_e energy</key_string>
+     <doc>String for denoting the average electron neutrino energy.</doc>
+  </string>
+
+  <string>
+     <key>s_AVERAGE_ENERGY_NUBAR_E</key>
+     <key_string>av nubar_e energy</key_string>
+     <doc>String for denoting the average electron anti-neutrino energy.</doc>
+  </string>
+
+  <string>
+     <key>s_BARYON</key>
+     <key_string>baryon</key_string>
+     <doc>String for denoting a baryon.</doc>
+  </string>
+
+  <string>
+     <key>s_BASE_EVOLUTION_NUC_XPATH</key>
+     <key_string>base evolution nuclear xpath</key_string>
+     <doc>String for denoting the nuclide XPath for the base evolution.</doc>
+  </string>
+
+  <string>
+     <key>s_BASE_EVOLUTION_REAC_XPATH</key>
+     <key_string>base evolution reaction xpath</key_string>
+     <doc>String for denoting the reaction XPath for the base evolution.</doc>
+  </string>
+
+  <string>
+     <key>s_BETA_MINUS_XPATH</key>
+     <key_string>[product = 'electron' and product = 'anti-neutrino_e']</key_string>
+     <doc>String for denoting the XPath for a beta minus reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_BETA_PLUS_XPATH</key>
+     <key_string>[product = 'positron' and product = 'neutrino_e']</key_string>
+     <doc>String for denoting the XPath for a beta plus reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_CHEMICAL_POTENTIAL_KT</key>
+     <key_string>chemical potential / kT</key_string>
+     <doc>String for denoting the chemical potential divided by kT.</doc>
+  </string>
+
+  <string>
+     <key>s_T_DERIVATIVE_CHEMICAL_POTENTIAL_KT</key>
+     <key_string>d chemical potential / kT dT</key_string>
+     <doc>String for denoting the temperature derivative of the chemical potential divided by kT.</doc>
+  </string>
+
+  <string>
+     <key>s_CLUSTER_CONSTRAINT</key>
+     <key_string>cluster constraint</key_string>
+     <doc>String for specifying an equilibrium cluster abundance constraint.</doc>
+  </string>
+
+  <string>
+     <key>s_CLUSTER_CHEMICAL_POTENTIAL</key>
+     <key_string>muh_kT</key_string>
+     <doc>String for denoting the chemical potential / kT of an equilibrium cluster.</doc>
+  </string>
+
+  <string>
+     <key>s_CLUSTER_XPATH</key>
+     <key_string>cluster xpath</key_string>
+     <doc>String for an XPath expression specifying an equilibrium cluster.</doc>
+  </string>
+
+  <string>
+     <key>s_DPDT</key>
+     <key_string>dPdT</key_string>
+     <doc>String denoting the derivative of pressure with respect to temperature.</doc>
+  </string>
+
+  <string>
+     <key>s_DTIME</key>
+     <key_string>dt</key_string>
+     <doc>String denoting the time step in an evolution calculation.</doc>
+  </string>
+
+  <string>
+     <key>s_ELECTRON</key>
+     <key_string>electron</key_string>
+     <doc>String denoting an electron.</doc>
+  </string>
+
+  <string>
+     <key>s_ELECTRON_CAPTURE_XPATH</key>
+     <key_string>[reactant = 'electron' and product = 'neutrino_e']</key_string>
+     <doc>String for denoting the XPath for an electron capture reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_ENTROPY_PER_NUCLEON</key>
+     <key_string>entropy per nucleon</key_string>
+     <doc>String denoting entropy per nucleon.</doc>
+  </string>
+
+  <string>
+     <key>s_EXPOSURE</key>
+     <key_string>exposure</key_string>
+     <doc>String denoting exposure (in inverse millibarns).</doc>
+  </string>
+
+  <string>
+     <key>s_FINAL_ABUNDANCE</key>
+     <key_string>final abundance</key_string>
+     <doc>String denoting the initial abundance.</doc>
+  </string>
+
+  <string>
+     <key>s_FLOW_CURRENT</key>
+     <key_string>flow current</key_string>
+     <doc>String denoting flow current.</doc>
+  </string>
+
+  <string>
+     <key>s_FORWARD_FLOW</key>
+     <key_string>forward flow</key_string>
+     <doc>String denoting the forward flow.</doc>
+  </string>
+
+  <string>
+     <key>s_GSL</key>
+     <key_string>Gsl</key_string>
+     <doc>String giving a flag for the GNU scientific library.</doc>
+  </string>
+
+  <string>
+     <key>s_EVOLVE_NSE_PLUS_WEAK_RATES</key>
+     <key_string>evolve nse plus weak rates</key_string>
+     <doc>String giving a flag to evolve the abundances in a zone with NSE plus weak reaction rates.</doc>
+  </string>
+
+  <string>
+     <key>s_ILU_DELTA</key>
+     <key_string>ilu delta</key_string>
+     <doc>String giving the number of elements to drop in the ilu preconditioner.</doc>
+  </string>
+
+  <string>
+     <key>s_ILU_DROP_TOL</key>
+     <key_string>ilu drop tolerance</key_string>
+     <doc>String giving the key_string below which to drop key_strings in the ilu preconditioner.</doc>
+  </string>
+
+  <string>
+     <key>s_INITIAL_ABUNDANCE</key>
+     <key_string>initial abundance</key_string>
+     <doc>String denoting the initial abundance.</doc>
+  </string>
+
+  <string>
+     <key>s_INTERNAL_ENERGY_DENSITY</key>
+     <key_string>internal energy density</key_string>
+     <doc>String denoting the internal energy density (ergs/cm^3).</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER</key>
+     <key_string>iterative solver method</key_string>
+     <doc>String containing the name of the iterative solver to be used.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_CONVERGENCE_METHOD</key>
+     <key_string>iterative solver convergence method</key_string>
+     <doc>String denoting the name of the iterative solver convergence method to be used.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_DEBUG</key>
+     <key_string>iterative solver debug</key_string>
+     <doc>String denoting whether to debug iterative solutions.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_MAX_ITERATIONS</key>
+     <key_string>iterative solver maximum iterations</key_string>
+     <doc>String denoting the maximum number of iterations in an iterative solution.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_REL_TOL</key>
+     <key_string>iterative solver relative tolerance</key_string>
+     <doc>String denoting the relative tolerance for convergence of an iterative solution.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_ABS_TOL</key>
+     <key_string>iterative solver absolute tolerance</key_string>
+     <doc>String denoting the absolute tolerance for convergence of an iterative solution.</doc>
+  </string>
+
+  <string>
+     <key>s_ITER_SOLVER_T9</key>
+     <key_string>t9 for iterative solver</key_string>
+     <doc>String denoting the temperature (in 10^9 K) below which to use the iterative solver.</doc>
+  </string>
+
+  <string>
+     <key>s_LAB_RATE</key>
+     <key_string>lab rate</key_string>
+     <doc>String for denoting the laboratory rate of a (typically weak) reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_LAB_RATE_T9_CUTOFF</key>
+     <key_string>lab rate t9 cutoff</key_string>
+     <doc>String for denoting the temperature (in 10^9 K) below which to switch over to the laboratory rate for a (typically weak) reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_LAB_RATE_T9_CUTOFF_FACTOR</key>
+     <key_string>lab rate t9 cutoff factor</key_string>
+     <doc>String for denoting the factor by which a (typically weak) rate switches over to the laboratory rate.</doc>
+  </string>
+
+  <string>
+     <key>s_LARGE_NEG_ABUND_THRESHOLD</key>
+     <key_string>large negative abundances threshold</key_string>
+     <doc>String for indicating below which negative abundance a calculation will throw an error.</doc>
+  </string>
+
+  <string>
+     <key>s_LOG10_FT</key>
+     <key_string>log10_ft</key_string>
+     <doc>String for denoting the log10 ft key_string of a weak rate.</doc>
+  </string>
+
+  <string>
+     <key>s_LOG10_RATE</key>
+     <key_string>log10_rate</key_string>
+     <doc>String for denoting the log10 of the rate of a reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_LOG10_RHOE</key>
+     <key_string>log10_rhoe</key_string>
+     <doc>String for denoting the log10 of the product of the electron fraction Ye and the density (in g/cc).</doc>
+  </string>
+
+  <string>
+     <key>s_MACH</key>
+     <key_string>mach number</key_string>
+     <doc>String denoting the Mach number.</doc>
+  </string>
+
+  <string>
+     <key>s_MUEKT</key>
+     <key_string>muekT</key_string>
+     <doc>String denoting the electron chemical potential.</doc>
+  </string>
+
+  <string>
+     <key>s_MUPKT</key>
+     <key_string>mupkT</key_string>
+     <doc>String denoting the proton chemical potential.</doc>
+  </string>
+
+  <string>
+     <key>s_MUNKT</key>
+     <key_string>munkT</key_string>
+     <doc>String denoting the neutron chemical potential.</doc>
+  </string>
+
+  <string>
+     <key>s_MU_NUE_KT</key>
+     <key_string>munuekT</key_string>
+     <doc>String denoting the electron neutrino chemical potential.</doc>
+  </string>
+
+  <string>
+     <key>s_NET_FLOW</key>
+     <key_string>net</key_string>
+     <doc>String denoting the net flow for a reaction. Could this be replaced?</doc>
+  </string>
+
+  <string>
+     <key>s_NEUTRINO_E</key>
+     <key_string>neutrino_e</key_string>
+     <doc>String denoting the electron neutrino.</doc>
+  </string>
+
+  <string>
+     <key>s_NEWTON_RAPHSON_ABUNDANCE</key>
+     <key_string>Newton-Raphson abundance minimum</key_string>
+     <doc>String for denoting the minimum abundance to consider for Newton-Raphson convergence.  Default?</doc>
+  </string>
+
+  <string>
+     <key>s_NEWTON_RAPHSON_CONVERGE</key>
+     <key_string>Newton-Raphson convergence minimum</key_string>
+     <doc>String for denoting the error to consider for Newton-Raphson convergence.  Default?</doc>
+  </string>
+
+  <string>
+     <key>s_PARTICLE</key>
+     <key_string>particle</key_string>
+     <doc>String for denoting a particle.</doc>
+  </string>
+
+  <string>
+     <key>s_PHOTON</key>
+     <key_string>photon</key_string>
+     <doc>String for denoting a photon.</doc>
+  </string>
+
+  <string>
+     <key>s_POSITRON</key>
+     <key_string>positron</key_string>
+     <doc>String for denoting a positron.</doc>
+  </string>
+
+  <string>
+     <key>s_POSITRON_CAPTURE_XPATH</key>
+     <key_string>[reactant = 'positron' and product = 'anti-neutrino_e']</key_string>
+     <doc>XPath expression for selecting a positron capture reaction.</doc>
+  </string>
+
+  <string>
+     <key>s_PRESSURE</key>
+     <key_string>pressure</key_string>
+     <doc>String for denoting the pressure.</doc>
+  </string>
+
+  <string>
+     <key>s_RADIUS_0</key>
+     <key_string>radius_0</key_string>
+     <doc>String for denoting the initial radius.</doc>
+  </string>
+
+  <string>
+     <key>s_RADIUS</key>
+     <key_string>radius</key_string>
+     <doc>String for denoting the current radius.</doc>
+  </string>
+
+  <string>
+     <key>s_RATE_MODIFICATION_VIEW</key>
+     <key_string>rate modification view</key_string>
+     <doc>String for denoting a view for a rate modification.</doc>
+  </string>
+
+  <string>
+     <key>s_FACTOR</key>
+     <key_string>factor</key_string>
+     <doc>String for denoting a factor (e.g., that by which to multiply rates for reactions in a rate modification view).</doc>
+  </string>
+
+  <string>
+     <key>s_NUC_XPATH</key>
+     <key_string>nuclide xpath</key_string>
+     <doc>String for denoting the XPath expression to select nuclides.</doc>
+  </string>
+
+  <string>
+     <key>s_REAC_XPATH</key>
+     <key_string>reaction xpath</key_string>
+     <doc>String for denoting the XPath expression to select reactions.</doc>
+  </string>
+
+  <string>
+     <key>s_REVERSE_FLOW</key>
+     <key_string>reverse flow</key_string>
+     <doc>String for denoting the reverse reaction flow.</doc>
+  </string>
+
+  <string>
+     <key>s_RHO</key>
+     <key_string>rho</key_string>
+     <doc>String for denoting the current density.</doc>
+  </string>
+
+  <string>
+     <key>s_RHO_0</key>
+     <key_string>rho_0</key_string>
+     <doc>String for denoting the initial density.</doc>
+  </string>
+
+  <string>
+     <key>s_RHO1</key>
+     <key_string>cell density</key_string>
+     <doc>String for denoting the cell density.  This must be changed.  It is used (barely) in the shock code but probably collides with simple_snII.</doc>
+  </string>
+
+  <string>
+     <key>s_SOLVER</key>
+     <key_string>solver</key_string>
+     <doc>String for denoting the matrix solver.</doc>
+  </string>
+
+  <string>
+     <key>s_SMALL_ABUNDANCES_THRESHOLD</key>
+     <key_string>small abundances threshold</key_string>
+     <doc>String for denoting the minimum abundance not to be zeroed out.</doc>
+  </string>
+
+  <string>
+     <key>s_SMALL_RATES_THRESHOLD</key>
+     <key_string>small rates threshold</key_string>
+     <doc>String for denoting the minimum rate key_string not to be zeroed out.</doc>
+  </string>
+
+  <string>
+     <key>s_SPECIFIC_HEAT_PER_NUCLEON</key>
+     <key_string>cv</key_string>
+     <doc>String for denoting the specific heat per nucleon.</doc>
+  </string>
+
+  <string>
+     <key>s_SPECIFIC_ABUNDANCE</key>
+     <key_string>specific abundance</key_string>
+     <doc>String for denoting a specific abundance--usually for a species whose abundance is held constant.</doc>
+  </string>
+
+  <string>
+     <key>s_SPECIFIC_SPECIES</key>
+     <key_string>specific species</key_string>
+     <doc>String for denoting a specific species--usually one whose abundance is held constant.</doc>
+  </string>
+
+  <string>
+     <key>s_STEPS</key>
+     <key_string>steps</key_string>
+     <doc>String for denoting the frequency of time steps to print out.</doc>
+  </string>
+
+  <string>
+     <key>s_T1</key>
+     <key_string>cell temperature</key_string>
+     <doc>String for denoting the cell temperature.  This must be changed.  It is used (barely) in the shock code but probably collides with simple_snII.</doc>
+  </string>
+
+  <string>
+     <key>s_THERMO</key>
+     <key_string>thermo</key_string>
+     <doc>String for denoting thermo quantities or functions.</doc>
+  </string>
+
+  <string>
+     <key>s_TEND</key>
+     <key_string>tend</key_string>
+     <doc>String for denoting the end time for an evolution calculation.</doc>
+  </string>
+
+  <string>
+     <key>s_TAU</key>
+     <key_string>tau</key_string>
+     <doc>String for denoting the density e-folding timescale.</doc>
+  </string>
+
+  <string>
+     <key>s_TAU_LUM_NEUTRINO</key>
+     <key_string>tau for neutrino luminosity</key_string>
+     <doc>String for denoting the e-folding timescale for the neutrino luminosity.</doc>
+  </string>
+
+  <string>
+     <key>s_THERMO_NUC_VIEW</key>
+     <key_string>thermo nuc view</key_string>
+     <doc>String for denoting the XPath expression to select nuclides for a thermo quantity calculation.</doc>
+  </string>
+
+  <string>
+     <key>s_TIME</key>
+     <key_string>time</key_string>
+     <doc>String for denoting the current time in a evolution calculation.</doc>
+  </string>
+
+  <string>
+     <key>s_TOTAL</key>
+     <key_string>total</key_string>
+     <doc>String for denoting the total contribution to a quantity.</doc>
+  </string>
+
+  <string>
+     <key>s_TWO_D_WEAK_RATES</key>
+     <key_string>two-d weak rates</key_string>
+     <doc>String for denoting two-dimensional weak rates computed directly.</doc>
+  </string>
+
+  <string>
+     <key>s_TWO_D_WEAK_RATES_LOG10_FT</key>
+     <key_string>two-d weak rates log10 ft</key_string>
+     <doc>String for denoting two-dimensional weak rates computed froom the log10 ft key_string.</doc>
+  </string>
+
+  <string>
+     <key>s_TWO_D_WEAK_XPATH</key>
+     <key_string>[user_rate/@key = 'two-d weak rates log10 ft' or user_rate/@key = 'two-d weak rates']</key_string>
+     <doc>XPath expression for selecting 2-d weak rates.</doc>
+  </string>
+
+  <string>
+     <key>s_T9</key>
+     <key_string>t9</key_string>
+     <doc>String for denoting the current temperature (in 10^9 K).</doc>
+  </string>
+
+  <string>
+     <key>s_T9_0</key>
+     <key_string>t9_0</key_string>
+     <doc>String for denoting the initial temperature (in 10^9 K).</doc>
+  </string>
+
+  <string>
+     <key>s_USE_APPROXIMATE_WEAK_RATES</key>
+     <key_string>use approximate weak rates</key_string>
+     <doc>String for denoting whether to use the approximate weak rates.</doc>
+  </string>
+   
+  <string>
+     <key>s_USE_NSE_CORRECTION</key>
+     <key_string>use nse correction</key_string>
+     <doc>String for denoting whether to use NSE correction.</doc>
+  </string>
+
+  <string>
+     <key>s_USE_SCREENING</key>
+     <key_string>use screening</key_string>
+     <doc>String for denoting whether to use screening.</doc>
+  </string>
+
+  <string>
+     <key>s_USE_WEAK_DETAILED_BALANCE</key>
+     <key_string>use weak detailed balance</key_string>
+     <doc>String for denoting whether to use weak detailed balance.</doc>
+  </string>
+
+  <string>
+     <key>s_WEAK_VIEW_FOR_LAB_RATE_TRANSITION</key>
+     <key_string>weak view for lab rate transition</key_string>
+     <doc>String for denoting the weak view to select nuclei needing a transition to lab rates.</doc>
+  </string>
+
+  <string>
+     <key>s_WEAK_XPATH</key>
+     <key_string>[reactant = 'electron' or product = 'electron' or reactant = 'positron' or product = 'positron']</key_string>
+     <doc>XPath expression to select weak reactions.</doc>
+  </string>
+
+  <string>
+     <key>s_YE</key>
+     <key_string>Ye</key_string>
+     <doc>String to denote the electron-to-nucleon ratio</doc>
+  </string>
+
+  <string>
+     <key>s_ZONE_MASS</key>
+     <key_string>zone mass</key_string>
+     <doc>String to denote the mass in a zone.</doc>
+  </string>
+
+  <string>
+     <key>s_ZONE_MASS_CHANGE</key>
+     <key_string>zone mass change</key_string>
+     <doc>String to denote the change in the mass in a zone.</doc>
+  </string>
+
+</strings>

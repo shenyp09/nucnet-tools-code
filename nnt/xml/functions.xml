@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+   Copyright (c) 2015 Clemson University.
+  
+   This file was originally written by Bradley S. Meyer.
+  
+   This is free software; you can redistribute it and or modify it
+   under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+  
+   This software is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+  
+   You should have received a copy of the GNU General Public License
+   along with this software; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+   USA
+                                                                                
+  /**
+  * \file
+  * \brief An xml file for global functions.
+  */
+-->
+
+<functions>
+
+  <function>
+     <key>s_NSE_CORRECTION_FACTOR_DATA_FUNCTION</key>
+     <key_string>nse corr factor data func</key_string>
+     <doc>The function to get the data for the NSE correction factor function.</doc>
+     <prototype>any type()</prototype>
+  </function>
+
+  <function>
+     <key>s_MATRIX_MODIFICATION_FUNCTION</key>
+     <key_string>matrix function</key_string>
+     <doc>Function to modify a matrix after it has been set.</doc>
+     <prototype>void(WnMatrix *, gsl_vector *)</prototype>
+  </function>
+
+  <function>
+     <key>s_RATE_DATA_UPDATE_FUNCTION</key>
+     <key_string>rate data update function</key_string>
+     <doc>The extra function to be called to update user-suppled rate function data during an evolution timestep for a zone.</doc>
+     <prototype>void()</prototype>
+  </function>
+
+  <function>
+     <key>s_RATE_MODIFICATION_FUNCTION</key>
+     <key_string>rate modificaton function</key_string>
+     <doc>The extra function to be called to modify rates after they have been computed but before the rate matrix has been built during an evolution timestep.</doc>
+     <prototype>void()</prototype>
+  </function>
+
+  <function>
+     <key>s_SAFE_EVOLVE_CHECK_FUNCTION</key>
+     <key_string>safe evolve check function</key_string>
+     <doc>The extra function to be called to check for time step cutting in safe evolve routine.  The function should return true if the abundance results are satisfactory and false if not.  If not, the safe evolve routine will cut the time step and try again.</doc>
+     <prototype>bool( nnt::Zone&amp; )</prototype>
+  </function>
+
+  <function>
+     <key>s_SCREENING_DATA_FUNCTION</key>
+     <key_string>screening data function</key_string>
+     <doc>The function to get the data for the screening function.</doc>
+     <prototype>any type()</prototype>
+  </function>
+
+</functions>

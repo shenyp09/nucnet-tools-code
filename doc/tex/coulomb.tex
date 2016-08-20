@@ -1,0 +1,178 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+
+\newcommand{\mnras}{Mon. Not. Royal. Astron. Soc.}
+\newcommand{\pra}{Phys. Rev. A}
+
+\begin{document}
+
+\title{Default NSE Corrections in NucNet Tools}
+\author{Bradley S. Meyer}
+
+\maketitle
+
+This document presents some notes on the default Coulomb corrections used
+in \href{http://nucnet-tools.sourceforge.net}{NucNet Tools}.
+We use the expression for the Helmholtz free energy in
+the one-component plasma (OCP) given in \cite{1980PhRvA..21.2087S}:
+\begin{equation}
+\frac{F(\Gamma)}{NkT} = g_1(\Gamma) =
+a \Gamma + 4 b \Gamma^{1/4} - 4 c \Gamma^{-1/4} + d\ln(\Gamma) -
+\left[ a + 4 (b - c) \right] + \frac{F(1)}{kT}
+\label{eq:f}
+\end{equation}
+where $k$ is Boltzmann's constant and $T$ is the temperature.
+Here, the Coulomb coupling parameter $\Gamma$ is given by
+\begin{equation}
+\Gamma = Z^{5/3} \Gamma_e
+\end{equation}
+where $Z$ is the ion charge and $\Gamma_e$ is given by
+\begin{equation}
+\Gamma_e = \left(\frac{e^2}{a_e k T}\right)
+\end{equation}
+with the electron cloud radius $a_e$ given in terms of the electron number
+density $n_e$ as
+\begin{equation}
+a_e = \left( \frac{3}{4 \pi n_e} \right)^{1/3}
+\end{equation}
+As suggested by \cite{1999MNRAS.307..984B}, when $\Gamma < 1$ we take
+\begin{equation}
+\frac{F(\Gamma)}{NkT} = g_2(\Gamma) = -\frac{1}{\sqrt{3}} \Gamma^{3/2} +
+\frac{\beta}{\gamma} \Gamma^\gamma
+\label{eq:f1}
+\end{equation}
+The constants $\beta$ and $\gamma$ are determined by
+matching the expressions in Eqs (\ref{eq:f}) and (\ref{eq:f1}) and
+their first derivatives at $\Gamma = 1$.
+
+It is possible to compute thermodynamic quantities from Eq. (\ref{eq:f})
+or Eq. (\ref{eq:f1}).  The chemical potential $\mu$ is given by
+\begin{equation}
+\mu = \left(\frac{\partial F}{\partial N}\right)_{T,V}
+\end{equation}
+If we do not change $n_e$ in the variation, then we simply find
+\begin{equation}
+\frac{\mu}{kT} = g(\Gamma)
+\end{equation}
+where we choose $g = g_1$ for $\Gamma > 1$ and $g = g_2$ for $\Gamma < 1$.
+
+The entropy $S$ is given by
+\begin{equation}
+S = -\left(\frac{\partial F}{\partial T}\right)_{V,N}
+\end{equation}
+We first note that
+\begin{equation}
+\left(\frac{\partial \Gamma}{\partial T}\right)_{V,N} = -\frac{\Gamma}{T}
+\end{equation}
+With this result, we note that
+\begin{equation}
+\frac{S}{Nk} = -g + \Gamma \frac{\partial g}{\partial \Gamma}
+\end{equation}
+where $g$ is either $g_1$ or $g_2$.
+For $\Gamma > 1$, $g = g_1$, so
+\begin{equation}
+\Gamma \frac{\partial g}{\partial \Gamma} =
+a \Gamma + b \Gamma^{1/4} + c \Gamma^{-1/4} + d
+\label{eq:gdgdl}
+\end{equation}
+From this, we find
+\begin{equation}
+\frac{S}{Nk} = -3 b \Gamma^{1/4} + 5 c \Gamma^{-1/4} + d - d\ln(\Gamma) + o
+\end{equation}
+where
+\begin{equation}
+o = a + 4 (b - c) - \frac{F(1)}{kT}
+\end{equation}
+For $\Gamma < 1$, $g = g_2$, so
+\begin{equation}
+\Gamma \frac{\partial g}{\partial \Gamma} =
+-\frac{\sqrt{3}}{2} \Gamma^{3/2} + \beta \Gamma^\gamma
+\label{eq:gdgdl2}
+\end{equation}
+In this case, the entropy for $\Gamma < 1$ is
+\begin{equation}
+\frac{S}{Nk} = -\frac{1}{2\sqrt{3}} \Gamma^{3/2} +
+\beta \left( 1 - \frac{1}{\gamma}\right) \Gamma^\gamma
+\end{equation}
+
+The energy $U$ is given by
+\begin{equation}
+\frac{U}{NkT} = \frac{F + TS}{NkT} = \frac{F}{NkT} + \frac{S}{Nk} =
+\Gamma \frac{\partial g}{\partial \Gamma}
+\end{equation}
+For $\Gamma > 1$, we find from Eq. (\ref{eq:gdgdl})
+\begin{equation}
+\frac{U}{NkT} = 
+a \Gamma + b \Gamma^{1/4} + c \Gamma^{-1/4} + d
+\end{equation}
+For $\Gamma < 1$, we find from Eq. (\ref{eq:gdgdl2})
+\begin{equation}
+\frac{U}{NkT} = 
+-\frac{\sqrt{3}}{2} \Gamma^{3/2} + \beta \Gamma^\gamma
+\end{equation}
+
+The pressure $P$ is given by
+\begin{equation}
+P = -\left( \frac{\partial F}{\partial V}\right)_{T,N}
+\end{equation}
+From the expression for $\Gamma$, we find
+\begin{equation}
+\left(\frac{\partial \Gamma}{\partial V}\right)_{T,N} = -\frac{\Gamma}{3V}
+\end{equation}
+With this,
+\begin{equation}
+P = \frac{NkT}{3V} \Gamma \frac{\partial g}{\partial \Gamma}
+= \frac{1}{3}\frac{U}{V}
+\end{equation}
+
+For the default NSE correction treatment in NucNet Tools, 
+the constants $a$, $b$, $c$, and $d$ are taken from \cite{1987PhRvA..36.5451O}.
+The value of $F(1) / NkT = -0.420$, as suggested by \cite{1980PhRvA..21.2087S}.
+
+When more than one ion species is present (a multi-component plasma),
+we use the usual ``additive approximation'' in which each species
+is computed as if it were a OCP and then the contributions of each ion are
+weighted by the ion's abundance.  In this case, we consider the abundance
+per nucleon of species $i$ as $Y_i = N_i / N$, where $N$ is the total
+number of nucleons in the system.  The Coulomb entropy per nucleon (in
+units of $k$) for species $i$ is then
+\begin{equation}
+s_i = Y_i \left( -g + \Gamma \frac{\partial g}{\partial \Gamma} \right)
+\end{equation}
+Similarly, the energy per nucleon for species $i$ is
+\begin{equation}
+\frac{u_i}{kT} = Y_i \Gamma \frac{\partial g}{\partial \Gamma}
+\end{equation}
+The partial pressure for species $i$ is
+\begin{equation}
+P_i = \frac{1}{3} n u_i
+\end{equation}
+where $n$ is the number density of total nucleons.
+
+\bibliographystyle{plain}
+
+\begin{thebibliography}{1}
+
+\bibitem{1999MNRAS.307..984B}
+E.~{Bravo} and D.~{Garc{\'{\i}}a-Senz}.
+\newblock {Coulomb corrections to the equation of state of nuclear statistical
+  equilibrium matter: implications for SNIa nucleosynthesis and the
+  accretion-induced collapse of white dwarfs}.
+\newblock {\em \mnras}, 307:984--992, August 1999.
+
+\bibitem{1987PhRvA..36.5451O}
+S.~{Ogata} and S.~{Ichimaru}.
+\newblock {Critical examination of N dependence in the Monte Carlo calculations
+  for a classical one-component plasma}.
+\newblock {\em \pra}, 36:5451--5454, December 1987.
+
+\bibitem{1980PhRvA..21.2087S}
+W.~L. {Slattery}, G.~D. {Doolen}, and H.~E. {Dewitt}.
+\newblock {Improved equation of state for the classical one-component plasma}.
+\newblock {\em \pra}, 21:2087--2095, June 1980.
+
+\end{thebibliography}
+
+\end{document}
