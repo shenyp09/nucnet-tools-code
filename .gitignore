@@ -12,7 +12,7 @@
 # Ignore files with extension `.class` & `.sm`
 *.class
 *.sm
-*.dSYM
+*.dSYM/
 
 # Ignore macOS spotlight files
 .DS_Store
