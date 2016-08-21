@@ -1,0 +1,11 @@
+dt
+1.e-5
+
+tend
+3.15e07
+
+munuekT
+-inf
+
+steps
+5
