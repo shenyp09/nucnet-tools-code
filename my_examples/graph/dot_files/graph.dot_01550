@@ -1,0 +1,474 @@
+digraph G {
+graph [bgcolor=lightgrey];
+node [shape=box, color="blue", width=1, height=1, penwidth=3.];
+label = "latex";
+texlbl = "\huge{$time(s) = 6255.89          \ \ \ \ T_9 = 0.000157343          \ \ \ \ \rho(g/cc) = 9.61813e-09$}";
+0 [texlbl="\huge{$^{2}\mathrm{H}$}"           label="h2",           pos="100,100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+1 [texlbl="\huge{$^{3}\mathrm{H}$}"           label="h3",           pos="200,100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+2 [texlbl="\huge{$^{3}\mathrm{He}$}"           label="he3",           pos="100,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+3 [texlbl="\huge{$^{6}\mathrm{He}$}"           label="he6",           pos="400,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+4 [texlbl="\huge{$^{7}\mathrm{He}$}"           label="he7",           pos="500,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+5 [texlbl="\huge{$^{8}\mathrm{He}$}"           label="he8",           pos="600,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+6 [texlbl="\huge{$^{9}\mathrm{He}$}"           label="he9",           pos="700,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+7 [texlbl="\huge{$^{10}\mathrm{He}$}"           label="he10",           pos="800,200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+8 [texlbl="\huge{$^{6}\mathrm{Li}$}"           label="li6",           pos="300,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+9 [texlbl="\huge{$^{7}\mathrm{Li}$}"           label="li7",           pos="400,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+10 [texlbl="\huge{$^{8}\mathrm{Li}$}"           label="li8",           pos="500,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+11 [texlbl="\huge{$^{9}\mathrm{Li}$}"           label="li9",           pos="600,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+12 [texlbl="\huge{$^{10}\mathrm{Li}$}"           label="li10",           pos="700,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+13 [texlbl="\huge{$^{11}\mathrm{Li}$}"           label="li11",           pos="800,300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+14 [texlbl="\huge{$^{7}\mathrm{Be}$}"           label="be7",           pos="300,400!",           style=filled, fillcolor="#ffc1c1"          ]
+;
+15 [texlbl="\huge{$^{8}\mathrm{Be}$}"           label="be8",           pos="400,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+16 [texlbl="\huge{$^{9}\mathrm{Be}$}"           label="be9",           pos="500,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+17 [texlbl="\huge{$^{10}\mathrm{Be}$}"           label="be10",           pos="600,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+18 [texlbl="\huge{$^{11}\mathrm{Be}$}"           label="be11",           pos="700,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+19 [texlbl="\huge{$^{12}\mathrm{Be}$}"           label="be12",           pos="800,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+20 [texlbl="\huge{$^{13}\mathrm{Be}$}"           label="be13",           pos="900,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+21 [texlbl="\huge{$^{14}\mathrm{Be}$}"           label="be14",           pos="1000,400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+22 [texlbl="\huge{$^{8}\mathrm{B}$}"           label="b8",           pos="300,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+23 [texlbl="\huge{$^{9}\mathrm{B}$}"           label="b9",           pos="400,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+24 [texlbl="\huge{$^{10}\mathrm{B}$}"           label="b10",           pos="500,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+25 [texlbl="\huge{$^{11}\mathrm{B}$}"           label="b11",           pos="600,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+26 [texlbl="\huge{$^{12}\mathrm{B}$}"           label="b12",           pos="700,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+27 [texlbl="\huge{$^{13}\mathrm{B}$}"           label="b13",           pos="800,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+28 [texlbl="\huge{$^{14}\mathrm{B}$}"           label="b14",           pos="900,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+29 [texlbl="\huge{$^{15}\mathrm{B}$}"           label="b15",           pos="1000,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+30 [texlbl="\huge{$^{17}\mathrm{B}$}"           label="b17",           pos="1200,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+31 [texlbl="\huge{$^{19}\mathrm{B}$}"           label="b19",           pos="1400,500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+32 [texlbl="\huge{$^{9}\mathrm{C}$}"           label="c9",           pos="300,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+33 [texlbl="\huge{$^{10}\mathrm{C}$}"           label="c10",           pos="400,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+34 [texlbl="\huge{$^{11}\mathrm{C}$}"           label="c11",           pos="500,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+35 [texlbl="\huge{$^{12}\mathrm{C}$}"           label="c12",           pos="600,600!",           style=filled, fillcolor="#ff4949"          ]
+;
+36 [texlbl="\huge{$^{13}\mathrm{C}$}"           label="c13",           pos="700,600!",           style=filled, fillcolor="#ff5c5c"          ]
+;
+37 [texlbl="\huge{$^{14}\mathrm{C}$}"           label="c14",           pos="800,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+38 [texlbl="\huge{$^{15}\mathrm{C}$}"           label="c15",           pos="900,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+39 [texlbl="\huge{$^{16}\mathrm{C}$}"           label="c16",           pos="1000,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+40 [texlbl="\huge{$^{17}\mathrm{C}$}"           label="c17",           pos="1100,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+41 [texlbl="\huge{$^{18}\mathrm{C}$}"           label="c18",           pos="1200,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+42 [texlbl="\huge{$^{19}\mathrm{C}$}"           label="c19",           pos="1300,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+43 [texlbl="\huge{$^{20}\mathrm{C}$}"           label="c20",           pos="1400,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+44 [texlbl="\huge{$^{22}\mathrm{C}$}"           label="c22",           pos="1600,600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+45 [texlbl="\huge{$^{11}\mathrm{N}$}"           label="n11",           pos="400,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+46 [texlbl="\huge{$^{12}\mathrm{N}$}"           label="n12",           pos="500,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+47 [texlbl="\huge{$^{13}\mathrm{N}$}"           label="n13",           pos="600,700!",           style=filled, fillcolor="#ffa9a9"          ]
+;
+48 [texlbl="\huge{$^{14}\mathrm{N}$}"           label="n14",           pos="700,700!",           style=filled, fillcolor="#ff5555"          ]
+;
+49 [texlbl="\huge{$^{15}\mathrm{N}$}"           label="n15",           pos="800,700!",           style=filled, fillcolor="#ff3636"          ]
+;
+50 [texlbl="\huge{$^{16}\mathrm{N}$}"           label="n16",           pos="900,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+51 [texlbl="\huge{$^{17}\mathrm{N}$}"           label="n17",           pos="1000,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+52 [texlbl="\huge{$^{18}\mathrm{N}$}"           label="n18",           pos="1100,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+53 [texlbl="\huge{$^{19}\mathrm{N}$}"           label="n19",           pos="1200,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+54 [texlbl="\huge{$^{20}\mathrm{N}$}"           label="n20",           pos="1300,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+55 [texlbl="\huge{$^{21}\mathrm{N}$}"           label="n21",           pos="1400,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+56 [texlbl="\huge{$^{22}\mathrm{N}$}"           label="n22",           pos="1500,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+57 [texlbl="\huge{$^{23}\mathrm{N}$}"           label="n23",           pos="1600,700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+58 [texlbl="\huge{$^{13}\mathrm{O}$}"           label="o13",           pos="500,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+59 [texlbl="\huge{$^{14}\mathrm{O}$}"           label="o14",           pos="600,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+60 [texlbl="\huge{$^{15}\mathrm{O}$}"           label="o15",           pos="700,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+61 [texlbl="\huge{$^{16}\mathrm{O}$}"           label="o16",           pos="800,800!",           style=filled, fillcolor="#ff9191"          ]
+;
+62 [texlbl="\huge{$^{17}\mathrm{O}$}"           label="o17",           pos="900,800!",           style=filled, fillcolor="#ff7272"          ]
+;
+63 [texlbl="\huge{$^{18}\mathrm{O}$}"           label="o18",           pos="1000,800!",           style=filled, fillcolor="#ff9292"          ]
+;
+64 [texlbl="\huge{$^{19}\mathrm{O}$}"           label="o19",           pos="1100,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+65 [texlbl="\huge{$^{20}\mathrm{O}$}"           label="o20",           pos="1200,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+66 [texlbl="\huge{$^{21}\mathrm{O}$}"           label="o21",           pos="1300,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+67 [texlbl="\huge{$^{22}\mathrm{O}$}"           label="o22",           pos="1400,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+68 [texlbl="\huge{$^{23}\mathrm{O}$}"           label="o23",           pos="1500,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+69 [texlbl="\huge{$^{24}\mathrm{O}$}"           label="o24",           pos="1600,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+70 [texlbl="\huge{$^{25}\mathrm{O}$}"           label="o25",           pos="1700,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+71 [texlbl="\huge{$^{26}\mathrm{O}$}"           label="o26",           pos="1800,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+72 [texlbl="\huge{$^{28}\mathrm{O}$}"           label="o28",           pos="2000,800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+73 [texlbl="\huge{$^{14}\mathrm{F}$}"           label="f14",           pos="500,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+74 [texlbl="\huge{$^{15}\mathrm{F}$}"           label="f15",           pos="600,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+75 [texlbl="\huge{$^{16}\mathrm{F}$}"           label="f16",           pos="700,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+76 [texlbl="\huge{$^{17}\mathrm{F}$}"           label="f17",           pos="800,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+77 [texlbl="\huge{$^{18}\mathrm{F}$}"           label="f18",           pos="900,900!",           style=filled, fillcolor="#ff9090"          ]
+;
+78 [texlbl="\huge{$^{19}\mathrm{F}$}"           label="f19",           pos="1000,900!",           style=filled, fillcolor="#ff9b9b"          ]
+;
+79 [texlbl="\huge{$^{20}\mathrm{F}$}"           label="f20",           pos="1100,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+80 [texlbl="\huge{$^{21}\mathrm{F}$}"           label="f21",           pos="1200,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+81 [texlbl="\huge{$^{22}\mathrm{F}$}"           label="f22",           pos="1300,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+82 [texlbl="\huge{$^{23}\mathrm{F}$}"           label="f23",           pos="1400,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+83 [texlbl="\huge{$^{24}\mathrm{F}$}"           label="f24",           pos="1500,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+84 [texlbl="\huge{$^{25}\mathrm{F}$}"           label="f25",           pos="1600,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+85 [texlbl="\huge{$^{26}\mathrm{F}$}"           label="f26",           pos="1700,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+86 [texlbl="\huge{$^{27}\mathrm{F}$}"           label="f27",           pos="1800,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+87 [texlbl="\huge{$^{28}\mathrm{F}$}"           label="f28",           pos="1900,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+88 [texlbl="\huge{$^{29}\mathrm{F}$}"           label="f29",           pos="2000,900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+89 [texlbl="\huge{$^{16}\mathrm{Ne}$}"           label="ne16",           pos="600,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+90 [texlbl="\huge{$^{17}\mathrm{Ne}$}"           label="ne17",           pos="700,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+91 [texlbl="\huge{$^{18}\mathrm{Ne}$}"           label="ne18",           pos="800,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+92 [texlbl="\huge{$^{19}\mathrm{Ne}$}"           label="ne19",           pos="900,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+93 [texlbl="\huge{$^{20}\mathrm{Ne}$}"           label="ne20",           pos="1000,1000!",           style=filled, fillcolor="#ff4a4a"          ]
+;
+94 [texlbl="\huge{$^{21}\mathrm{Ne}$}"           label="ne21",           pos="1100,1000!",           style=filled, fillcolor="#ffa2a2"          ]
+;
+95 [texlbl="\huge{$^{22}\mathrm{Ne}$}"           label="ne22",           pos="1200,1000!",           style=filled, fillcolor="#ffbdbd"          ]
+;
+96 [texlbl="\huge{$^{23}\mathrm{Ne}$}"           label="ne23",           pos="1300,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+97 [texlbl="\huge{$^{24}\mathrm{Ne}$}"           label="ne24",           pos="1400,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+98 [texlbl="\huge{$^{25}\mathrm{Ne}$}"           label="ne25",           pos="1500,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+99 [texlbl="\huge{$^{26}\mathrm{Ne}$}"           label="ne26",           pos="1600,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+100 [texlbl="\huge{$^{27}\mathrm{Ne}$}"           label="ne27",           pos="1700,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+101 [texlbl="\huge{$^{28}\mathrm{Ne}$}"           label="ne28",           pos="1800,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+102 [texlbl="\huge{$^{29}\mathrm{Ne}$}"           label="ne29",           pos="1900,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+103 [texlbl="\huge{$^{30}\mathrm{Ne}$}"           label="ne30",           pos="2000,1000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+104 [texlbl="\huge{$^{18}\mathrm{Na}$}"           label="na18",           pos="700,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+105 [texlbl="\huge{$^{19}\mathrm{Na}$}"           label="na19",           pos="800,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+106 [texlbl="\huge{$^{20}\mathrm{Na}$}"           label="na20",           pos="900,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+107 [texlbl="\huge{$^{21}\mathrm{Na}$}"           label="na21",           pos="1000,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+108 [texlbl="\huge{$^{22}\mathrm{Na}$}"           label="na22",           pos="1100,1100!",           style=filled, fillcolor="#ff5050"          ]
+;
+109 [texlbl="\huge{$^{23}\mathrm{Na}$}"           label="na23",           pos="1200,1100!",           style=filled, fillcolor="#ff3d3d"          ]
+;
+110 [texlbl="\huge{$^{24}\mathrm{Na}$}"           label="na24",           pos="1300,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+111 [texlbl="\huge{$^{25}\mathrm{Na}$}"           label="na25",           pos="1400,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+112 [texlbl="\huge{$^{26}\mathrm{Na}$}"           label="na26",           pos="1500,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+113 [texlbl="\huge{$^{27}\mathrm{Na}$}"           label="na27",           pos="1600,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+114 [texlbl="\huge{$^{28}\mathrm{Na}$}"           label="na28",           pos="1700,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+115 [texlbl="\huge{$^{29}\mathrm{Na}$}"           label="na29",           pos="1800,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+116 [texlbl="\huge{$^{30}\mathrm{Na}$}"           label="na30",           pos="1900,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+117 [texlbl="\huge{$^{31}\mathrm{Na}$}"           label="na31",           pos="2000,1100!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+118 [texlbl="\huge{$^{19}\mathrm{Mg}$}"           label="mg19",           pos="700,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+119 [texlbl="\huge{$^{20}\mathrm{Mg}$}"           label="mg20",           pos="800,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+120 [texlbl="\huge{$^{21}\mathrm{Mg}$}"           label="mg21",           pos="900,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+121 [texlbl="\huge{$^{22}\mathrm{Mg}$}"           label="mg22",           pos="1000,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+122 [texlbl="\huge{$^{23}\mathrm{Mg}$}"           label="mg23",           pos="1100,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+123 [texlbl="\huge{$^{24}\mathrm{Mg}$}"           label="mg24",           pos="1200,1200!",           style=filled, fillcolor="#ff6d6d"          ]
+;
+124 [texlbl="\huge{$^{25}\mathrm{Mg}$}"           label="mg25",           pos="1300,1200!",           style=filled, fillcolor="#ff4c4c"          ]
+;
+125 [texlbl="\huge{$^{26}\mathrm{Mg}$}"           label="mg26",           pos="1400,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+126 [texlbl="\huge{$^{27}\mathrm{Mg}$}"           label="mg27",           pos="1500,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+127 [texlbl="\huge{$^{28}\mathrm{Mg}$}"           label="mg28",           pos="1600,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+128 [texlbl="\huge{$^{29}\mathrm{Mg}$}"           label="mg29",           pos="1700,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+129 [texlbl="\huge{$^{30}\mathrm{Mg}$}"           label="mg30",           pos="1800,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+130 [texlbl="\huge{$^{31}\mathrm{Mg}$}"           label="mg31",           pos="1900,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+131 [texlbl="\huge{$^{32}\mathrm{Mg}$}"           label="mg32",           pos="2000,1200!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+132 [texlbl="\huge{$^{21}\mathrm{Al}$}"           label="al21",           pos="800,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+133 [texlbl="\huge{$^{22}\mathrm{Al}$}"           label="al22",           pos="900,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+134 [texlbl="\huge{$^{23}\mathrm{Al}$}"           label="al23",           pos="1000,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+135 [texlbl="\huge{$^{24}\mathrm{Al}$}"           label="al24",           pos="1100,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+136 [texlbl="\huge{$^{25}\mathrm{Al}$}"           label="al25",           pos="1200,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+137 [texlbl="\huge{$^{26}\mathrm{Al}$}"           label="al26",           pos="1300,1300!",           style=filled, fillcolor="#ff6565"          ]
+;
+138 [texlbl="\huge{$^{27}\mathrm{Al}$}"           label="al27",           pos="1400,1300!",           style=filled, fillcolor="#ff5656"          ]
+;
+139 [texlbl="\huge{$^{28}\mathrm{Al}$}"           label="al28",           pos="1500,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+140 [texlbl="\huge{$^{29}\mathrm{Al}$}"           label="al29",           pos="1600,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+141 [texlbl="\huge{$^{30}\mathrm{Al}$}"           label="al30",           pos="1700,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+142 [texlbl="\huge{$^{31}\mathrm{Al}$}"           label="al31",           pos="1800,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+143 [texlbl="\huge{$^{32}\mathrm{Al}$}"           label="al32",           pos="1900,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+144 [texlbl="\huge{$^{33}\mathrm{Al}$}"           label="al33",           pos="2000,1300!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+145 [texlbl="\huge{$^{22}\mathrm{Si}$}"           label="si22",           pos="800,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+146 [texlbl="\huge{$^{23}\mathrm{Si}$}"           label="si23",           pos="900,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+147 [texlbl="\huge{$^{24}\mathrm{Si}$}"           label="si24",           pos="1000,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+148 [texlbl="\huge{$^{25}\mathrm{Si}$}"           label="si25",           pos="1100,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+149 [texlbl="\huge{$^{26}\mathrm{Si}$}"           label="si26",           pos="1200,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+150 [texlbl="\huge{$^{27}\mathrm{Si}$}"           label="si27",           pos="1300,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+151 [texlbl="\huge{$^{28}\mathrm{Si}$}"           label="si28",           pos="1400,1400!",           style=filled, fillcolor="#ff4c4c"          ]
+;
+152 [texlbl="\huge{$^{29}\mathrm{Si}$}"           label="si29",           pos="1500,1400!",           style=filled, fillcolor="#ff4f4f"          ]
+;
+153 [texlbl="\huge{$^{30}\mathrm{Si}$}"           label="si30",           pos="1600,1400!",           style=filled, fillcolor="#ff4444"          ]
+;
+154 [texlbl="\huge{$^{31}\mathrm{Si}$}"           label="si31",           pos="1700,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+155 [texlbl="\huge{$^{32}\mathrm{Si}$}"           label="si32",           pos="1800,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+156 [texlbl="\huge{$^{33}\mathrm{Si}$}"           label="si33",           pos="1900,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+157 [texlbl="\huge{$^{34}\mathrm{Si}$}"           label="si34",           pos="2000,1400!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+158 [texlbl="\huge{$^{23}\mathrm{P}$}"           label="p23",           pos="800,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+159 [texlbl="\huge{$^{24}\mathrm{P}$}"           label="p24",           pos="900,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+160 [texlbl="\huge{$^{25}\mathrm{P}$}"           label="p25",           pos="1000,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+161 [texlbl="\huge{$^{26}\mathrm{P}$}"           label="p26",           pos="1100,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+162 [texlbl="\huge{$^{27}\mathrm{P}$}"           label="p27",           pos="1200,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+163 [texlbl="\huge{$^{28}\mathrm{P}$}"           label="p28",           pos="1300,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+164 [texlbl="\huge{$^{29}\mathrm{P}$}"           label="p29",           pos="1400,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+165 [texlbl="\huge{$^{30}\mathrm{P}$}"           label="p30",           pos="1500,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+166 [texlbl="\huge{$^{31}\mathrm{P}$}"           label="p31",           pos="1600,1500!",           style=filled, fillcolor="#ff4343"          ]
+;
+167 [texlbl="\huge{$^{32}\mathrm{P}$}"           label="p32",           pos="1700,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+168 [texlbl="\huge{$^{33}\mathrm{P}$}"           label="p33",           pos="1800,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+169 [texlbl="\huge{$^{34}\mathrm{P}$}"           label="p34",           pos="1900,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+170 [texlbl="\huge{$^{35}\mathrm{P}$}"           label="p35",           pos="2000,1500!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+171 [texlbl="\huge{$^{24}\mathrm{S}$}"           label="s24",           pos="800,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+172 [texlbl="\huge{$^{25}\mathrm{S}$}"           label="s25",           pos="900,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+173 [texlbl="\huge{$^{26}\mathrm{S}$}"           label="s26",           pos="1000,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+174 [texlbl="\huge{$^{27}\mathrm{S}$}"           label="s27",           pos="1100,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+175 [texlbl="\huge{$^{28}\mathrm{S}$}"           label="s28",           pos="1200,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+176 [texlbl="\huge{$^{29}\mathrm{S}$}"           label="s29",           pos="1300,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+177 [texlbl="\huge{$^{30}\mathrm{S}$}"           label="s30",           pos="1400,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+178 [texlbl="\huge{$^{31}\mathrm{S}$}"           label="s31",           pos="1500,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+179 [texlbl="\huge{$^{32}\mathrm{S}$}"           label="s32",           pos="1600,1600!",           style=filled, fillcolor="#ff4141"          ]
+;
+180 [texlbl="\huge{$^{33}\mathrm{S}$}"           label="s33",           pos="1700,1600!",           style=filled, fillcolor="#ff5858"          ]
+;
+181 [texlbl="\huge{$^{34}\mathrm{S}$}"           label="s34",           pos="1800,1600!",           style=filled, fillcolor="#ff5d5d"          ]
+;
+182 [texlbl="\huge{$^{35}\mathrm{S}$}"           label="s35",           pos="1900,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+183 [texlbl="\huge{$^{36}\mathrm{S}$}"           label="s36",           pos="2000,1600!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+184 [texlbl="\huge{$^{25}\mathrm{Cl}$}"           label="cl25",           pos="800,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+185 [texlbl="\huge{$^{26}\mathrm{Cl}$}"           label="cl26",           pos="900,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+186 [texlbl="\huge{$^{27}\mathrm{Cl}$}"           label="cl27",           pos="1000,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+187 [texlbl="\huge{$^{28}\mathrm{Cl}$}"           label="cl28",           pos="1100,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+188 [texlbl="\huge{$^{29}\mathrm{Cl}$}"           label="cl29",           pos="1200,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+189 [texlbl="\huge{$^{30}\mathrm{Cl}$}"           label="cl30",           pos="1300,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+190 [texlbl="\huge{$^{31}\mathrm{Cl}$}"           label="cl31",           pos="1400,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+191 [texlbl="\huge{$^{32}\mathrm{Cl}$}"           label="cl32",           pos="1500,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+192 [texlbl="\huge{$^{33}\mathrm{Cl}$}"           label="cl33",           pos="1600,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+193 [texlbl="\huge{$^{34}\mathrm{Cl}$}"           label="cl34",           pos="1700,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+194 [texlbl="\huge{$^{35}\mathrm{Cl}$}"           label="cl35",           pos="1800,1700!",           style=filled, fillcolor="#ff5858"          ]
+;
+195 [texlbl="\huge{$^{36}\mathrm{Cl}$}"           label="cl36",           pos="1900,1700!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+196 [texlbl="\huge{$^{37}\mathrm{Cl}$}"           label="cl37",           pos="2000,1700!",           style=filled, fillcolor="#ffa5a5"          ]
+;
+197 [texlbl="\huge{$^{27}\mathrm{Ar}$}"           label="ar27",           pos="900,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+198 [texlbl="\huge{$^{28}\mathrm{Ar}$}"           label="ar28",           pos="1000,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+199 [texlbl="\huge{$^{29}\mathrm{Ar}$}"           label="ar29",           pos="1100,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+200 [texlbl="\huge{$^{30}\mathrm{Ar}$}"           label="ar30",           pos="1200,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+201 [texlbl="\huge{$^{31}\mathrm{Ar}$}"           label="ar31",           pos="1300,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+202 [texlbl="\huge{$^{32}\mathrm{Ar}$}"           label="ar32",           pos="1400,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+203 [texlbl="\huge{$^{33}\mathrm{Ar}$}"           label="ar33",           pos="1500,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+204 [texlbl="\huge{$^{34}\mathrm{Ar}$}"           label="ar34",           pos="1600,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+205 [texlbl="\huge{$^{35}\mathrm{Ar}$}"           label="ar35",           pos="1700,1800!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+206 [texlbl="\huge{$^{36}\mathrm{Ar}$}"           label="ar36",           pos="1800,1800!",           style=filled, fillcolor="#ff6c6c"          ]
+;
+207 [texlbl="\huge{$^{37}\mathrm{Ar}$}"           label="ar37",           pos="1900,1800!",           style=filled, fillcolor="#ff5d5d"          ]
+;
+208 [texlbl="\huge{$^{38}\mathrm{Ar}$}"           label="ar38",           pos="2000,1800!",           style=filled, fillcolor="#ff7070"          ]
+;
+209 [texlbl="\huge{$^{29}\mathrm{K}$}"           label="k29",           pos="1000,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+210 [texlbl="\huge{$^{30}\mathrm{K}$}"           label="k30",           pos="1100,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+211 [texlbl="\huge{$^{31}\mathrm{K}$}"           label="k31",           pos="1200,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+212 [texlbl="\huge{$^{32}\mathrm{K}$}"           label="k32",           pos="1300,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+213 [texlbl="\huge{$^{33}\mathrm{K}$}"           label="k33",           pos="1400,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+214 [texlbl="\huge{$^{34}\mathrm{K}$}"           label="k34",           pos="1500,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+215 [texlbl="\huge{$^{35}\mathrm{K}$}"           label="k35",           pos="1600,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+216 [texlbl="\huge{$^{36}\mathrm{K}$}"           label="k36",           pos="1700,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+217 [texlbl="\huge{$^{37}\mathrm{K}$}"           label="k37",           pos="1800,1900!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+218 [texlbl="\huge{$^{38}\mathrm{K}$}"           label="k38",           pos="1900,1900!",           style=filled, fillcolor="#ffd4d4"          ]
+;
+219 [texlbl="\huge{$^{39}\mathrm{K}$}"           label="k39",           pos="2000,1900!",           style=filled, fillcolor="#ff8181"          ]
+;
+220 [texlbl="\huge{$^{30}\mathrm{Ca}$}"           label="ca30",           pos="1000,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+221 [texlbl="\huge{$^{31}\mathrm{Ca}$}"           label="ca31",           pos="1100,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+222 [texlbl="\huge{$^{32}\mathrm{Ca}$}"           label="ca32",           pos="1200,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+223 [texlbl="\huge{$^{33}\mathrm{Ca}$}"           label="ca33",           pos="1300,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+224 [texlbl="\huge{$^{34}\mathrm{Ca}$}"           label="ca34",           pos="1400,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+225 [texlbl="\huge{$^{35}\mathrm{Ca}$}"           label="ca35",           pos="1500,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+226 [texlbl="\huge{$^{36}\mathrm{Ca}$}"           label="ca36",           pos="1600,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+227 [texlbl="\huge{$^{37}\mathrm{Ca}$}"           label="ca37",           pos="1700,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+228 [texlbl="\huge{$^{38}\mathrm{Ca}$}"           label="ca38",           pos="1800,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+229 [texlbl="\huge{$^{39}\mathrm{Ca}$}"           label="ca39",           pos="1900,2000!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+230 [texlbl="\huge{$^{40}\mathrm{Ca}$}"           label="ca40",           pos="2000,2000!",           style=filled, fillcolor="#ff9393"          ]
+;
+231 [texlbl="\huge{$^{1}\mathrm{n}$}"           label="n",           pos="100,0!",           style=filled, fillcolor="#FFFFFF"          ]
+;
+232 [texlbl="\huge{$^{1}\mathrm{H}$}"           label="h1",           pos="0,100!",           style=filled, fillcolor="#ff1010"          ]
+;
+233 [texlbl="\huge{$^{4}\mathrm{He}$}"           label="he4",           pos="200,200!",           style=filled, fillcolor="#ff2121"          ]
+;
+}

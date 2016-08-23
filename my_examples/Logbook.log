@@ -1,0 +1,14 @@
+Tue Aug 23 09:09:53 2016
+
+./run_single_zone ../../data_pub/my_net.xml ../../data_pub/Nova.xml ../../data_pub/nova_profile_rescaled.txt 0823_0_output.xml "[a <= 60]"
+
+<optional_properties>
+  <property name="dt">1.e-5</property>
+  <property name="rho_0">1.278e7</property>
+  <property name="tend">3.15e15</property>
+  <property name="t9_0">20.5e-5</property>
+  <property name="steps">10</property>
+  <property name="munuekT">-inf</property>
+  <property name="tau">inf</property>
+</optional_properties>
+

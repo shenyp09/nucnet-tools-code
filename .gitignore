@@ -9,11 +9,13 @@
 
 ### Above combination will ignore all files without extension ###
 
-# Ignore files with extension `.class` & `.sm`
+# Ignore files with extension ...
 *.class
 *.sm
 *.dSYM/
 *.o
+*.png
+*.mp4
 
 # Ignore macOS spotlight files
 .DS_Store

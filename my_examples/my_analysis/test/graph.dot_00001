@@ -1,0 +1,9 @@
+digraph G {
+graph [bgcolor=lightgrey];
+0 [shape="box" label="h1"  pos="50,50!" width=0.7 height=0.7 style=filled fillcolor="yellow;0.3:blue"]
+;
+1 [shape="box" label="h2"  pos="0,0!"  width=0.7 height=0.7  style=filled fillcolor="yellow;0.3:blue"]
+;
+2 [shape="box" label="T"   pos="-50,0"  width=0.7 height=1.7  style=filled fillcolor="yellow;0.3:blue"]
+;
+}

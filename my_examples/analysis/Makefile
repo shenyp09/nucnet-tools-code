@@ -78,6 +78,7 @@ ANALYSIS_EXEC = compute_flows 			\
         compute_nucleon_number_flows 	        \
         print_abundances_for_element		\
         print_mass_fractions_in_zones		\
+        print_mass_fractions_in_zones_all		\
         print_abundances_vs_nucleon_number	\
         print_largest_mass_fractions_in_zones	\
         print_wse_abundances_in_zones           \

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zone_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/zone_data/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/zone_data.xsd">
+  <zone>
+    <optional_properties>
+      <property name="dt">1.e-5</property>
+      <property name="rho_0">1.278e7</property>
+      <property name="tend">3.15e15</property>
+      <property name="t9_0">20.5e-5</property>
+      <property name="steps">10</property>
+      <property name="munuekT">-inf</property>
+      <property name="tau">inf</property>
+    </optional_properties>
+    <mass_fractions>
+      <nuclide name="h1">
+        <z>1</z>
+        <a>1</a>
+        <x>3.662114864009736e-01</x>
+      </nuclide>
+      <nuclide name="he3">
+        <z>2</z>
+        <a>3</a>
+        <x>5.803351423840566e-06</x>
+      </nuclide>
+      <nuclide name="he4">
+        <z>2</z>
+        <a>4</a>
+        <x>1.330768516156544e-01</x>
+      </nuclide>
+      <nuclide name="c12">
+        <z>6</z>
+        <a>12</a>
+        <x>9.445454731216367e-04</x>
+      </nuclide>
+      <nuclide name="c13">
+        <z>6</z>
+        <a>13</a>
+        <x>1.150664506451146e-05</x>
+      </nuclide>
+      <nuclide name="n14">
+        <z>7</z>
+        <a>14</a>
+        <x>2.321340569536226e-06</x>
+      </nuclide>
+      <nuclide name="n15">
+        <z>7</z>
+        <a>15</a>
+        <x>9.125269825073438e-07</x>
+      </nuclide>
+      <nuclide name="o16">
+        <z>8</z>
+        <a>16</a>
+        <x>1.500866747544974e-01</x>
+      </nuclide>
+      <nuclide name="o17">
+        <z>8</z>
+        <a>17</a>
+        <x>8.534928904372417e-07</x>
+      </nuclide>
+      <nuclide name="o18">
+        <z>8</z>
+        <a>18</a>
+        <x>4.862808262045714e-06</x>
+      </nuclide>
+      <nuclide name="f19">
+        <z>9</z>
+        <a>19</a>
+        <x>1.130652949817214e-07</x>
+      </nuclide>
+      <nuclide name="ne20">
+        <z>10</z>
+        <a>20</a>
+        <x>2.491438800924656e-01</x>
+      </nuclide>
+      <nuclide name="ne21">
+        <z>10</z>
+        <a>21</a>
+        <x>9.005200485269842e-07</x>
+      </nuclide>
+      <nuclide name="ne22">
+        <z>10</z>
+        <a>22</a>
+        <x>2.831635263701517e-05</x>
+      </nuclide>
+      <nuclide name="na23">
+        <z>11</z>
+        <a>23</a>
+        <x>9.215321829926138e-06</x>
+      </nuclide>
+      <nuclide name="mg24">
+        <z>12</z>
+        <a>24</a>
+        <x>1.000577831696649e-01</x>
+      </nuclide>
+      <nuclide name="mg25">
+        <z>12</z>
+        <a>25</a>
+        <x>1.881086323589700e-05</x>
+      </nuclide>
+      <nuclide name="mg26">
+        <z>12</z>
+        <a>26</a>
+        <x>2.161248116464762e-05</x>
+      </nuclide>
+      <nuclide name="al27">
+        <z>13</z>
+        <a>27</a>
+        <x>1.610930309031605e-05</x>
+      </nuclide>
+      <nuclide name="si28">
+        <z>14</z>
+        <a>28</a>
+        <x>1.811045875370935e-04</x>
+      </nuclide>
+      <nuclide name="si29">
+        <z>14</z>
+        <a>29</a>
+        <x>9.515495179435135e-06</x>
+      </nuclide>
+      <nuclide name="si30">
+        <z>14</z>
+        <a>30</a>
+        <x>6.533773240979119e-06</x>
+      </nuclide>
+      <nuclide name="p31">
+        <z>15</z>
+        <a>31</a>
+        <x>2.261305899634427e-06</x>
+      </nuclide>
+      <nuclide name="s32">
+        <z>16</z>
+        <a>32</a>
+        <x>1.100635614866314e-04</x>
+      </nuclide>
+      <nuclide name="s33">
+        <z>16</z>
+        <a>33</a>
+        <x>8.955171593685010e-07</x>
+      </nuclide>
+      <nuclide name="s34">
+        <z>16</z>
+        <a>34</a>
+        <x>5.182993168188644e-06</x>
+      </nuclide>
+      <nuclide name="cl35">
+        <z>17</z>
+        <a>35</a>
+        <x>9.765639637359295e-07</x>
+      </nuclide>
+      <nuclide name="cl37">
+        <z>17</z>
+        <a>37</a>
+        <x>3.301906844598942e-07</x>
+      </nuclide>
+      <nuclide name="ar36">
+        <z>18</z>
+        <a>36</a>
+        <x>1.921109436857566e-05</x>
+      </nuclide>
+      <nuclide name="ar38">
+        <z>18</z>
+        <a>38</a>
+        <x>3.792189982130301e-06</x>
+      </nuclide>
+      <nuclide name="k39">
+        <z>19</z>
+        <a>39</a>
+        <x>9.635564519238731e-07</x>
+      </nuclide>
+      <nuclide name="ca40">
+        <z>20</z>
+        <a>40</a>
+        <x>1.660959200616438e-05</x>
+      </nuclide>
+    </mass_fractions>
+  </zone>
+</zone_data>

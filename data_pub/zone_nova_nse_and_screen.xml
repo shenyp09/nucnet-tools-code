@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zone_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/zone_data/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/zone_data.xsd">
+  <zone>
+    <optional_properties>
+      <property name="dt">1.e-5</property>
+      <property name="steps">5</property>
+      <property name="tend">1e3</property>
+      <property name="munuekT">-inf</property>
+      <property name="use nse correction">yes</property>
+	  <property name="use screening">yes</property>
+  </optional_properties>
+    <mass_fractions>
+      <nuclide name="h1">
+        <z>1</z>
+        <a>1</a>
+        <x>0.36771</x>
+      </nuclide>
+      <nuclide name="he4">
+        <z>2</z>
+        <a>4</a>
+        <x>0.13300</x>
+      </nuclide>
+      <nuclide name="o16">
+        <z>8</z>
+        <a>16</a>
+        <x>0.15036</x>
+      </nuclide>
+      <nuclide name="ne20">
+        <z>10</z>
+        <a>20</a>
+        <x>0.24883</x>
+      </nuclide>
+      <nuclide name="mg24">
+        <z>12</z>
+        <a>24</a>
+        <x>0.10010</x>
+      </nuclide>
+    </mass_fractions>
+  </zone>
+</zone_data>

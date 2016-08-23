@@ -12,10 +12,10 @@
 // GNU General Public License for more details.
 //
 ////////////////////////////////////////////////////////////////////////////////
- 
+
 ////////////////////////////////////////////////////////////////////////////////
 //! \file
-//! \brief Example code to print out mass fractions in zones. 
+//! \brief Example code to print out mass fractions in zones.
 ////////////////////////////////////////////////////////////////////////////////
 
 //##############################################################################
@@ -37,21 +37,21 @@ void
 check_input( int argc, char **argv )
 {
 
-  if( argc == 2 && strcmp( argv[1], "--example" ) == 0 )
+  if ( argc == 2 && strcmp( argv[1], "--example" ) == 0 )
   {
     std::cout << std::endl;
     std::cout << argv[0] << " my_output.xml n h1 he4" <<
-      std::endl << std::endl;
+              std::endl << std::endl;
     exit( EXIT_FAILURE );
   }
 
-  if( argc < 3 )
+  if ( argc < 3 )
   {
     std::cout << std::endl;
     std::cout << "Purpose: " << argv[0] <<
-      " prints out selected mass fractions from" << std::endl;
+              " prints out selected mass fractions from" << std::endl;
     std::cout <<
-      "a network xml file for all zones." << std::endl;
+              "a network xml file for all zones." << std::endl;
     fprintf(
       stderr,
       "\nUsage: %s xml_file species ...\n\n",
@@ -84,10 +84,10 @@ main( int argc, char **argv )
   Libnucnet__Species * p_species;
   int i;
   std::list<std::string> species_list;
-  
+
   check_input( argc, argv );
 
-  for( i = 2; i < argc; i++ )
+  for ( i = 2; i < argc; i++ )
     species_list.push_back( argv[i] );
 
   p_my_nucnet = Libnucnet__new();
@@ -107,14 +107,14 @@ main( int argc, char **argv )
   Libnucnet__setZoneCompareFunction(
     p_my_nucnet,
     (Libnucnet__Zone__compare_function)
-      nnt::zone_compare_by_first_label
+    nnt::zone_compare_by_first_label
   );
 
   nnt::zone_list_t zone_list = nnt::make_zone_list( p_my_nucnet );
 
   BOOST_FOREACH( nnt::Zone zone, zone_list )
   {
-
+    // print_zone_abundances(zone);
     std::cout << Libnucnet__Zone__getLabel( zone.getNucnetZone(), 1 );
 
     BOOST_FOREACH( std::string s_species, species_list )
@@ -126,7 +126,7 @@ main( int argc, char **argv )
           s_species.c_str()
         );
 
-      if( !p_species )
+      if ( !p_species )
       {
         std::cerr << std::endl;
         std::cerr << s_species << " is not a valid species!" << std::endl;
@@ -134,11 +134,11 @@ main( int argc, char **argv )
       }
 
       std::cout << "  " <<
-         Libnucnet__Species__getA( p_species ) *
-         Libnucnet__Zone__getSpeciesAbundance(
-           zone.getNucnetZone(),
-           p_species
-         );
+                Libnucnet__Species__getA( p_species ) *
+                Libnucnet__Zone__getSpeciesAbundance(
+                  zone.getNucnetZone(),
+                  p_species
+                );
 
     }
 
