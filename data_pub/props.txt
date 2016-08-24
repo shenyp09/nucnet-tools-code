@@ -1,0 +1,14 @@
+nuclide xpath
+rate modification view
+1
+[z <= 20]
+
+reaction xpath
+rate modification view
+1
+[reactant = 'h1' and reactant = 'al25' and product = 'gamma']
+
+factor
+rate modification view
+1
+10

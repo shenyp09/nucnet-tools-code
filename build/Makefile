@@ -153,7 +153,7 @@ ifeq ($(GC), icpc)
 endif
 
 ifeq ($(VALGRIND), yes)
-	CFLAGS+= -O0
+	CFLAGS+= -O2
 else
 	CFLAGS+= -O2
 endif

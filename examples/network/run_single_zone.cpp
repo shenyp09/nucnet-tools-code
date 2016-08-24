@@ -50,9 +50,9 @@
 #define S_SPECIES_REMOVAL_REAC_XPATH  "species removal reaction xpath"
 
 #define B_OUTPUT_EVERY_TIME_DUMP    false  // Change to true to write to xml
-                                           // every time dump.  False just
-                                           // writes output at end of
-                                           // calculation.
+// every time dump.  False just
+// writes output at end of
+// calculation.
 
 //##############################################################################
 // main().
@@ -84,7 +84,7 @@ int main( int argc, char * argv[] ) {
   // Get the zone.
   //============================================================================
 
-  if( !user::set_zone( p_my_nucnet, zone, argv ) )
+  if ( !user::set_zone( p_my_nucnet, zone, argv ) )
   {
     std::cerr << "Couldn't set zone."  << std::endl;
     return EXIT_FAILURE;
@@ -94,7 +94,7 @@ int main( int argc, char * argv[] ) {
   // Initialize time.
   //============================================================================
 
-  if( zone.hasProperty( nnt::s_DTIME ) )
+  if ( zone.hasProperty( nnt::s_DTIME ) )
     d_dt = zone.getProperty<double>( nnt::s_DTIME );
   else
   {
@@ -102,7 +102,7 @@ int main( int argc, char * argv[] ) {
     zone.updateProperty( nnt::s_DTIME, d_dt );
   }
 
-  if( zone.hasProperty( nnt::s_TIME ) )
+  if ( zone.hasProperty( nnt::s_TIME ) )
     d_t = zone.getProperty<double>( nnt::s_TIME );
   else
   {
@@ -120,7 +120,7 @@ int main( int argc, char * argv[] ) {
   // Use approximate weak rates or not.
   //============================================================================
 
-  if(
+  if (
     zone.hasProperty( nnt::s_USE_APPROXIMATE_WEAK_RATES ) &&
     zone.getProperty<std::string>( nnt::s_USE_APPROXIMATE_WEAK_RATES ) == "yes"
   )
@@ -130,7 +130,7 @@ int main( int argc, char * argv[] ) {
   // Update with detailed weak rates.
   //============================================================================
 
-  if( zone.hasProperty( S_DETAILED_WEAK_RATES ) )
+  if ( zone.hasProperty( S_DETAILED_WEAK_RATES ) )
   {
 
     Libnucnet__Reac__updateFromXml(
@@ -150,12 +150,12 @@ int main( int argc, char * argv[] ) {
   //============================================================================
   // If not set, set the neutrino chemical potential to -inf.
   //============================================================================
-  
-  if( !zone.hasProperty( nnt::s_MU_NUE_KT ) )
+
+  if ( !zone.hasProperty( nnt::s_MU_NUE_KT ) )
     zone.updateProperty(
       nnt::s_MU_NUE_KT,
       "-inf"
-    ); 
+    );
 
   //============================================================================
   // Remove duplicate reactions.
@@ -169,7 +169,7 @@ int main( int argc, char * argv[] ) {
   // Remove isolated species if desired.
   //============================================================================
 
-  if( zone.hasProperty( S_SPECIES_REMOVAL_REAC_XPATH ) )
+  if ( zone.hasProperty( S_SPECIES_REMOVAL_REAC_XPATH ) )
   {
 
     isolated_species_set =
@@ -197,24 +197,24 @@ int main( int argc, char * argv[] ) {
       );
 
     }
-    
+
   }
 
   //============================================================================
   // Set screening, Coulomb correction, and rate update functions.
   //============================================================================
 
-  if(
+  if (
     zone.hasProperty( nnt::s_USE_SCREENING ) &&
-    zone.getProperty<std::string>( nnt::s_USE_SCREENING ) == "yes" 
+    zone.getProperty<std::string>( nnt::s_USE_SCREENING ) == "yes"
   )
   {
     user::set_screening_function( zone );
   }
 
-  if(
+  if (
     zone.hasProperty( nnt::s_USE_NSE_CORRECTION ) &&
-    zone.getProperty<std::string>( nnt::s_USE_NSE_CORRECTION ) == "yes" 
+    zone.getProperty<std::string>( nnt::s_USE_NSE_CORRECTION ) == "yes"
   )
   {
     user::set_nse_correction_function( zone );
@@ -226,7 +226,7 @@ int main( int argc, char * argv[] ) {
   // Sort the nuclei if using the arrow solver.
   //============================================================================
 
-  if( S_SOLVER == nnt::s_ARROW )
+  if ( S_SOLVER == nnt::s_ARROW )
   {
 
     Libnucnet__Nuc__setSpeciesCompareFunction(
@@ -235,7 +235,7 @@ int main( int argc, char * argv[] ) {
     );
 
     Libnucnet__Nuc__sortSpecies(
-      Libnucnet__Net__getNuc( Libnucnet__getNet( p_my_nucnet ) ) 
+      Libnucnet__Net__getNuc( Libnucnet__getNet( p_my_nucnet ) )
     );
 
     zone.updateProperty( nnt::s_SOLVER, nnt::s_ARROW );
@@ -259,7 +259,7 @@ int main( int argc, char * argv[] ) {
   // Create current nucnet.
   //============================================================================
 
-  if( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
+  if ( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
   {
 
     p_flow_current_nucnet = nnt::create_network_copy( p_my_nucnet );
@@ -302,7 +302,7 @@ int main( int argc, char * argv[] ) {
   // Set matrix function and initialize exposure for specific species.
   //============================================================================
 
-  if( zone.hasProperty( nnt::s_SPECIFIC_SPECIES ) )
+  if ( zone.hasProperty( nnt::s_SPECIFIC_SPECIES ) )
   {
 
     zone.updateFunction(
@@ -331,9 +331,9 @@ int main( int argc, char * argv[] ) {
 
     d_t += d_dt;
 
-  //============================================================================
-  // Set dt and t.
-  //============================================================================
+    //============================================================================
+    // Set dt and t.
+    //============================================================================
 
     zone.updateProperty(
       nnt::s_DTIME,
@@ -345,10 +345,10 @@ int main( int argc, char * argv[] ) {
       d_t
     );
 
-  //============================================================================
-  // Update temperature and density.  Update dt and time again in case
-  // changed in update_zone_properties.
-  //============================================================================
+    //============================================================================
+    // Update temperature and density.  Update dt and time again in case
+    // changed in update_zone_properties.
+    //============================================================================
 
     user::update_zone_properties( zone );
 
@@ -356,32 +356,32 @@ int main( int argc, char * argv[] ) {
 
     d_dt = zone.getProperty<double>( nnt::s_DTIME );
 
-  //============================================================================
-  // Evolve abundances.
-  //============================================================================
+    //============================================================================
+    // Evolve abundances.
+    //============================================================================
 
     user::evolve( zone );
 
-  //============================================================================
-  // Update exposures and, if desired, network currents.
-  //============================================================================
+    //============================================================================
+    // Update exposures and, if desired, network currents.
+    //============================================================================
 
     user::update_exposures( zone );
 
-    if( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
+    if ( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
     {
       user::update_flow_currents( zone, flow_current_zone );
     }
 
-  //============================================================================
-  // Print out abundances.
-  //============================================================================
+    //============================================================================
+    // Print out abundances.
+    //============================================================================
 
-    if(
-       (
-         i_step % zone.getProperty<size_t>( nnt::s_STEPS ) == 0 ||
-         d_t >= zone.getProperty<double>( nnt::s_TEND )
-       )
+    if (
+      (
+        i_step % zone.getProperty<size_t>( nnt::s_STEPS ) == 0 ||
+        d_t >= zone.getProperty<double>( nnt::s_TEND )
+      )
     )
     {
       Libnucnet__relabelZone(
@@ -393,7 +393,7 @@ int main( int argc, char * argv[] ) {
       );
       nnt::print_zone_abundances( zone );
       nnt::write_xml( p_my_output, zone.getNucnetZone() );
-      if( B_OUTPUT_EVERY_TIME_DUMP )
+      if ( B_OUTPUT_EVERY_TIME_DUMP )
       {
         Libnucnet__writeToXmlFile(
           p_my_output,
@@ -402,9 +402,9 @@ int main( int argc, char * argv[] ) {
       }
     }
 
-  //============================================================================
-  // Update timestep.
-  //============================================================================
+    //============================================================================
+    // Update timestep.
+    //============================================================================
 
     Libnucnet__Zone__updateTimeStep(
       zone.getNucnetZone(),
@@ -414,10 +414,10 @@ int main( int argc, char * argv[] ) {
       D_Y_MIN_DT
     );
 
-    if( zone.getProperty<double>( nnt::s_T9 ) > 10. )
+    if ( zone.getProperty<double>( nnt::s_T9 ) > 10. )
       nnt::normalize_zone_abundances( zone );
 
-    if( d_t + d_dt > zone.getProperty<double>( nnt::s_TEND ) )
+    if ( d_t + d_dt > zone.getProperty<double>( nnt::s_TEND ) )
     {
       d_dt = zone.getProperty<double>( nnt::s_TEND ) - d_t;
     }
@@ -426,13 +426,13 @@ int main( int argc, char * argv[] ) {
 
     i_step++;
 
-  }  
+  }
 
   //============================================================================
   // Write output.
   //============================================================================
 
-  if( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
+  if ( zone.hasProperty( S_FLOW_CURRENT_XML_FILE ) )
   {
 
     user::copy_zone_abundances_as_properties(
@@ -444,13 +444,13 @@ int main( int argc, char * argv[] ) {
     Libnucnet__writeToXmlFile(
       p_flow_current_nucnet,
       (const char *)
-         zone.getProperty<std::string>( S_FLOW_CURRENT_XML_FILE ).c_str()
+      zone.getProperty<std::string>( S_FLOW_CURRENT_XML_FILE ).c_str()
     );
 
     Libnucnet__free( p_flow_current_nucnet );
 
   }
-        
+
   Libnucnet__updateZoneXmlMassFractionFormat(
     p_my_output,
     "%.15e"
