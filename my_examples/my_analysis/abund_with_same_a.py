@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 #
 import os
+
+
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 import numpy as np
 from sys import argv
@@ -13,7 +18,7 @@ r = np.exp(-t[:1000] / 0.05)               # impulse response
 x = np.random.randn(len(t))
 s = np.convolve(x, r)[:len(x)] * dt  # colored noise
 
-finput = os.listdir("./dat_files")
+finput = os.listdir("./dot_abund")
 # os.mkdir("abund_plot")
 try:
     finput.remove('.DS_Store')
@@ -36,7 +41,7 @@ for ii in xrange(0, len(finput)):
     temperature.append(properties[2][ii])
     density.append(properties[3][ii])
     # print fname
-    c = np.loadtxt("./dat_files/" + fname, dtype={'names': ('a', 'abund'),
+    c = np.loadtxt("./dot_abund/" + fname, dtype={'names': ('a', 'abund'),
                                                   'formats': (np.int, np.float)})
     c = np.array(c.tolist()).transpose()
     plt.clf()
@@ -63,7 +68,13 @@ for ii in xrange(0, len(finput)):
     ax.set_xlim([1e-5, 1e16])
     ax.set_ylim([1e-7, 1])
     plt.xticks(rotation=45)
+    ax2 = plt.twinx()  # this is the important function
+    ax2.plot(time, density)
+    ax2.set_yscale('log')
+    ax2.set_xlim([1e-5, 1e16])
+    ax2.set_ylim([1e-12, 1e4])
+    ax2.set_ylabel('$\\rho$(cgs)')
     # n, bins, patches = plt.hist(s, 400, normed=1)
     # plt.xticks(100)
     # plt.yticks([])
-    plt.savefig("abund_plot/" + fname + ".png")
+    plt.savefig("dot_abund_png/" + fname + ".png")

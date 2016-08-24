@@ -12,7 +12,7 @@
 // GNU General Public License for more details.
 //
 ////////////////////////////////////////////////////////////////////////////////
- 
+
 ////////////////////////////////////////////////////////////////////////////////
 //! \file
 //! \brief Helper header file for graph routines.
@@ -25,6 +25,7 @@
 // Includes.
 //##############################################################################
 
+#include <iostream>
 #include <vector>
 #include "nnt/graph.h"
 
@@ -76,7 +77,7 @@ add_reaction_net_flow_edges(
   my_graph_t&,
   my_vertex_hash_t&,
   nnt::Reaction&,
-  std::pair<double,double>&
+  std::pair<double, double>&
 );
 
 void
@@ -84,7 +85,7 @@ add_reaction_all_flow_edges(
   my_graph_t&,
   my_vertex_hash_t&,
   nnt::Reaction&,
-  std::pair<double,double>&
+  std::pair<double, double>&
 );
 
 void

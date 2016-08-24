@@ -124,7 +124,7 @@ CLANG_TEST := $(shell $(GC) -v 2>&1 > /dev/null | grep clang)
 # Compiler flags.
 #===============================================================================
 
-CFLAGS= -Werror -Wall \
+CFLAGS= -Werror \
          -Wpointer-arith \
          -Wwrite-strings \
          -fshort-enums -fno-common -g \

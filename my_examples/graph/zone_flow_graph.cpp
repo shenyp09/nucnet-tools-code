@@ -12,7 +12,7 @@
 // GNU General Public License for more details.
 //
 ////////////////////////////////////////////////////////////////////////////////
- 
+
 ////////////////////////////////////////////////////////////////////////////////
 //! \file
 //! \brief Example code to write out the net flow graph of a zone in dot
@@ -43,7 +43,7 @@
 #include "graph_types.h"
 #include "graph_helper.h"
 
-#define D_SCALE  100
+#define D_SCALE  200
 #define D_MAX_FLOW_SCALE 10
 
 #define B_ALLOW_ISOLATED_VERTICES false
@@ -53,7 +53,7 @@
 //##############################################################################
 
 struct
-my_vertex_writer
+  my_vertex_writer
 {
   my_vertex_writer( my_graph_t& g_ ) :           g( g_ ) {};
   template <class Vertex>
@@ -64,18 +64,20 @@ my_vertex_writer
     char * s_latex_string =
       Libnucnet__Species__createLatexString( g[v].getNucnetSpecies() );
     out <<
-      boost::format(
-        " [texlbl=\"\\huge{$%s$}\" \
+        boost::format(
+          " [texlbl=\"\\huge{$%s$}\" \
+          label=\"%s\", \
           pos=\"%d,%d!\", \
           style=filled, fillcolor=\"%s\" \
          ]"
-      ) % 
+        ) %
         s_latex_string %
+        Libnucnet__Species__getName(g[v].getNucnetSpecies()) %
         ( D_SCALE * i_n ) %
         ( D_SCALE * i_z ) %
         g[v].getExtraData().color
         << std::endl;
-     free( s_latex_string );
+    free( s_latex_string );
   }
   my_graph_t& g;
 };
@@ -85,7 +87,7 @@ my_vertex_writer
 //##############################################################################
 
 struct
-my_edge_writer
+  my_edge_writer
 {
   my_edge_writer( my_graph_t& g_ ) :
     g( g_ ) {};
@@ -95,15 +97,16 @@ my_edge_writer
     out.precision(5);
     std::string s_color = get_reaction_color( g[e].getNucnetReaction() );
     std::string s_style = get_reaction_linestyle( g[e].getNucnetReaction() );
+
     out <<
-      boost::format(
-        "[style=\"line width = %gpt, %s\" color = \"%s\"]"
-      ) %
+        boost::format(
+          "[style=\"setlinewidth(%g), %s\" color = \"%s\"]"
+        ) %
         ( D_MAX_FLOW_SCALE * g[e].getWeight() ) %
         s_style %
         s_color
-       <<
-      std::endl;
+        <<
+        std::endl;
   }
   my_graph_t &g;
 };
@@ -113,7 +116,7 @@ my_edge_writer
 //##############################################################################
 
 struct
-my_graph_writer
+  my_graph_writer
 {
   my_graph_writer( nnt::Zone& zone_ ) : zone( zone_ ) {};
   void operator()( std::ostream& out ) const
@@ -121,20 +124,20 @@ my_graph_writer
     out.precision(4);
     out << "graph [bgcolor=lightgrey];" << std::endl;
     out <<
-      boost::format( "node [shape=box color=\"%s\"];" ) % get_bounding_color()
-      << std::endl;
+        boost::format( "node [shape=box, color=\"%s\", width=0.7, height=0.7, penwidth=3.];" ) % get_bounding_color()
+        << std::endl;
     out << "label = \"latex\";" << std::endl;
     out <<
-      boost::format(
-        "texlbl = \"\\huge{$time(s) = %g \
+        boost::format(
+          "texlbl = \"\\huge{$time(s) = %g \
          \\ \\ \\ \\ T_9 = %g \
          \\ \\ \\ \\ \\rho(g/cc) = %g \
          \\ \\ \\ \\ {\\mathrm{flow}_{max}} = %g$}\";"
-      ) %
-      zone.getProperty<double>( nnt::s_TIME ) %
-      zone.getProperty<double>( nnt::s_T9 ) %
-      zone.getProperty<double>( nnt::s_RHO ) %
-      zone.getProperty<double>( "max flow" ) << std::endl;
+        ) %
+        zone.getProperty<double>( nnt::s_TIME ) %
+        zone.getProperty<double>( nnt::s_T9 ) %
+        zone.getProperty<double>( nnt::s_RHO ) %
+        zone.getProperty<double>( "max flow" ) << std::endl;
   };
   nnt::Zone& zone;
 };
@@ -216,15 +219,15 @@ create_graph(
   BOOST_FOREACH( nnt::Reaction reaction, reaction_list )
   {
 
-    std::pair<double,double> flows =
+    std::pair<double, double> flows =
       user::compute_flows_for_reaction(
         zone,
         reaction.getNucnetReaction()
       );
 
-    if( s_type == "net" )
+    if ( s_type == "net" )
       add_reaction_net_flow_edges( g, vertices_hash, reaction, flows );
-    else if( s_type == "all" )
+    else if ( s_type == "all" )
       add_reaction_all_flow_edges( g, vertices_hash, reaction, flows );
     else
     {
@@ -252,7 +255,7 @@ main( int argc, char **argv )
 
   my_graph_t g, sub_g;
 
-  if( argc != 9 )
+  if ( argc != 9 )
   {
     fprintf(
       stderr,
@@ -305,7 +308,7 @@ main( int argc, char **argv )
   //============================================================================
   // Get net view.
   //============================================================================
-  
+
   p_view =
     Libnucnet__NetView__new(
       Libnucnet__getNet( p_my_nucnet ),
@@ -316,7 +319,7 @@ main( int argc, char **argv )
   //============================================================================
   // Create reaction color map.
   //============================================================================
-  
+
   create_reaction_color_map(
     Libnucnet__Net__getReac( Libnucnet__getNet( p_my_nucnet ) )
   );
@@ -332,7 +335,7 @@ main( int argc, char **argv )
   //============================================================================
   // Register rate functions.  Set two-d weak rates hash.
   //============================================================================
-  
+
   user::register_rate_functions(
     Libnucnet__Net__getReac( Libnucnet__getNet( p_my_nucnet ) )
   );
@@ -346,7 +349,7 @@ main( int argc, char **argv )
     Libnucnet__Net__getReac( Libnucnet__getNet( p_my_nucnet ) )
   );
 #endif
-  
+
   user::set_two_d_weak_rates_hashes(
     Libnucnet__Net__getReac( Libnucnet__getNet( p_my_nucnet ) )
   );
@@ -354,7 +357,7 @@ main( int argc, char **argv )
   //============================================================================
   // Get subgraph view.
   //============================================================================
-  
+
   p_nuc_view =
     Libnucnet__NucView__new(
       Libnucnet__Net__getNuc( Libnucnet__getNet( p_my_nucnet ) ),
@@ -364,7 +367,7 @@ main( int argc, char **argv )
   //============================================================================
   // Get zone list.
   //============================================================================
-  
+
   Libnucnet__setZoneCompareFunction(
     p_my_nucnet,
     (Libnucnet__Zone__compare_function) nnt::zone_compare_by_first_label
@@ -375,7 +378,7 @@ main( int argc, char **argv )
   //============================================================================
   // Iterate zones.
   //============================================================================
-  
+
   nnt::Zone zone_first = *(zone_list.begin());
 
   BOOST_FOREACH( nnt::Zone zone, zone_list )
@@ -383,7 +386,7 @@ main( int argc, char **argv )
 
     std::cout << Libnucnet__Zone__getLabel( zone.getNucnetZone(), 1 ) << std::endl;
 
-    if( !( zone == zone_first ) )
+    if ( !( zone == zone_first ) )
     {
       Libnucnet__Zone__copy_net_views(
         zone.getNucnetZone(),
@@ -412,8 +415,8 @@ main( int argc, char **argv )
     // Induce another subgraph to get rid of isolated vertices, if desired.
     // Add anchors to fix graph boundaries.
     //==========================================================================
-    
-    if( !B_ALLOW_ISOLATED_VERTICES )
+
+    if ( !B_ALLOW_ISOLATED_VERTICES )
     {
       sub_g =
         create_induced_subgraph( sub_g, p_nuc_view, false );
@@ -424,11 +427,11 @@ main( int argc, char **argv )
     //==========================================================================
 
     add_solar( sub_g, p_nuc_view );
-    
+
     //==========================================================================
     // Output.
     //==========================================================================
-    
+
     std::stringstream ss;
 
     ss <<
@@ -442,7 +445,7 @@ main( int argc, char **argv )
       std::string( argv[8] ) +
       std::string( "_" ) +
       s_label;
-   
+
     my_output( sub_g, zone, s_output.c_str() );
 
   }

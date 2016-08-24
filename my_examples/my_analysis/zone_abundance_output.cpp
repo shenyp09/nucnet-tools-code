@@ -39,7 +39,6 @@
 
 int Counter;
 std::ofstream parameter_out;
-char * outdir = "dat_files";
 
 //##############################################################################
 // create_graph().
@@ -56,7 +55,7 @@ create_data(
 
 
     char s_output[100];
-    snprintf(s_output, sizeof s_output, outdir + "/abund_%05d.dat", Counter);
+    snprintf(s_output, sizeof s_output, "dot_abund/abund_%05d.dat", Counter);
 
     std::ofstream my_out;
     my_out.open( s_output );
@@ -70,6 +69,7 @@ create_data(
     double a_abund_tmp[100];
     memset(a_abund_tmp, 0, 100 * sizeof(double));
     int max_a = 1;
+    double d_xm = Libnucnet__Zone__computeAMoment( zone.getNucnetZone(), 1 );
 
     BOOST_FOREACH( nnt::Species species, species_list )
     {
@@ -86,10 +86,11 @@ create_data(
             );
         a_abund_tmp[i_a] += d_y;
     }
+    printf("%f\n", d_xm);
     for (int i = 1; i <= max_a; ++i)
     {
         char s[1000];
-        snprintf(s, sizeof s, "%5d %10.2e\n", i, a_abund_tmp[i]);
+        snprintf(s, sizeof s, "%5d %10.2e %10.2e\n", i, a_abund_tmp[i] / d_xm, a_abund_tmp[i]*i);
         my_out << s;
     }
 
