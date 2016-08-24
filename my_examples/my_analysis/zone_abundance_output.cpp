@@ -66,17 +66,30 @@ create_data(
             Libnucnet__NucView__getNuc( p_nuc_view )
         );
 
-    double a_abund_tmp[100];
+    double a_abund_tmp[100], z_abund_tmp[100], n_abund_tmp[100];
     memset(a_abund_tmp, 0, 100 * sizeof(double));
-    int max_a = 1;
+    memset(z_abund_tmp, 0, 100 * sizeof(double));
+    memset(n_abund_tmp, 0, 100 * sizeof(double));
+    int max_a = 1, max_z = 0, max_n = 0;
     double d_xm = Libnucnet__Zone__computeAMoment( zone.getNucnetZone(), 1 );
+    double total_sum = 0, m_total_sum = 0;
 
     BOOST_FOREACH( nnt::Species species, species_list )
     {
         int i_a = Libnucnet__Species__getA( species.getNucnetSpecies() );
+        int i_z = Libnucnet__Species__getZ( species.getNucnetSpecies() );
+        int i_n = i_a - i_z;
         if (i_a > max_a)
         {
             max_a = i_a;
+        }
+        if (i_z > max_z)
+        {
+            max_z = i_z;
+        }
+        if (i_n > max_n)
+        {
+            max_n = i_n;
         }
 
         double d_y =
@@ -84,13 +97,19 @@ create_data(
                 zone.getNucnetZone(),
                 species.getNucnetSpecies()
             );
+
+        m_total_sum += d_y * i_a;
+        total_sum += d_y;
+
         a_abund_tmp[i_a] += d_y;
+        z_abund_tmp[i_z] += d_y;
+        n_abund_tmp[i_n] += d_y;
     }
-    printf("%f\n", d_xm);
     for (int i = 1; i <= max_a; ++i)
     {
         char s[1000];
-        snprintf(s, sizeof s, "%5d %10.2e %10.2e\n", i, a_abund_tmp[i] / d_xm, a_abund_tmp[i]*i);
+        snprintf(s, sizeof s, "%5d  %10.2e %10.2e %10.2e\n", i,
+                 a_abund_tmp[i], a_abund_tmp[i]*i, a_abund_tmp[i] / total_sum);
         my_out << s;
     }
 

@@ -41,7 +41,7 @@ base=$1
 
 function CMD {        # 测试命令, 随机等待几秒钟
     echo $1
-    ./abund_with_same_a_single.py properties_0823_1.txt $1
+    ./abund_with_same_a_single.py properties_${base}_a.txt $1
 }
 
 #///////////////////////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ fi
 mkdir $INPUT_DIR 
 mkdir $OUTPUT_DIR
 
-./print_properties ../network/${base}_output.xml time t9 rho > properties_${base}.txt
+./print_properties ../network/${base}_output.xml time t9 rho > properties_${base}_a.txt
 
 ./zone_abundance_output ../network/${base}_output.xml "[a <= 60]" "" 1e-30 r
 
@@ -98,5 +98,5 @@ mkdir $OUTPUT_DIR
 # done  
 # wait
 
-ffmpeg -nostdin -v -1 -i '${OUTPUT_DIR}/abund_%5d.dat.png' "${base}_ABUND.mp4"
+ffmpeg -nostdin -v -1 -i "${OUTPUT_DIR}/abund_%5d.dat.png" "${base}_ABUND.mp4"
 

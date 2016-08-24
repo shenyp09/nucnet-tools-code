@@ -41,12 +41,12 @@ for ii in xrange(0, len(finput)):
     temperature.append(properties[2][ii])
     density.append(properties[3][ii])
     # print fname
-    c = np.loadtxt("./dot_abund/" + fname, dtype={'names': ('a', 'abund'),
-                                                  'formats': (np.int, np.float)})
+    c = np.loadtxt("./dot_abund/" + fname, dtype={'names': ('a', 'abund', 'mass frac', 'norm abund'),
+                                                  'formats': (np.int, np.float, np.float, np.float)})
     c = np.array(c.tolist()).transpose()
     plt.clf()
     plt.yscale('log', nonposy='clip')
-    plt.ylabel("Abundance")
+    plt.ylabel("Abundance per nucleon")
     plt.xlabel("A")
     axes = plt.gca()
     axes.set_ylim([1e-10, 1])

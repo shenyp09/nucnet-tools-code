@@ -56,55 +56,55 @@ add_solar(
         g[*vi].updateExtraData( my_vertex_data( colors.first, "box" ) );
     }
 
-    // std::vector<std::string> stables = nnt::get_stable_species();
+    std::vector<std::string> stables = nnt::get_stable_species();
 
-    // BOOST_FOREACH( std::string s, stables )
-    // {
+    BOOST_FOREACH( std::string s, stables )
+    {
 
-    //     if ( my_vertices.find( s ) != my_vertices.end() )
-    //     {
-    //         g[my_vertices[ s ]].updateExtraData( set_vertex_data( colors.second ) );
-    //     }
-    //     else
-    //     {
+        if ( my_vertices.find( s ) != my_vertices.end() )
+        {
+            g[my_vertices[ s ]].updateExtraData( set_vertex_data( colors.second ) );
+        }
+        else
+        {
 
-    //         p_species =
-    //             Libnucnet__Nuc__getSpeciesByName(
-    //                 Libnucnet__NucView__getNuc( p_nuc_view ),
-    //                 s.c_str()
-    //             );
+            p_species =
+                Libnucnet__Nuc__getSpeciesByName(
+                    Libnucnet__NucView__getNuc( p_nuc_view ),
+                    s.c_str()
+                );
 
-    //         if ( p_species )
-    //         {
+            if ( p_species )
+            {
 
-    //             v = add_vertex( g );
-    //             g[v].setNucnetSpecies( p_species );
-    //             g[v].updateExtraData( set_vertex_data( colors.second ) );
-    //             my_vertices[Libnucnet__Species__getName( p_species )] = v;
+                v = add_vertex( g );
+                g[v].setNucnetSpecies( p_species );
+                g[v].updateExtraData( set_vertex_data( colors.second ) );
+                my_vertices[Libnucnet__Species__getName( p_species )] = v;
 
-    //         }
+            }
 
-    //     }
+        }
 
-    // }
+    }
 
-    // special_vertex_color_map = get_special_vertex_color_map();
+    special_vertex_color_map = get_special_vertex_color_map();
 
-    // for(
-    //   its = special_vertex_color_map.begin();
-    //   its != special_vertex_color_map.end();
-    //   its++
-    // )
-    // {
+    for (
+        its = special_vertex_color_map.begin();
+        its != special_vertex_color_map.end();
+        its++
+    )
+    {
 
-    //   if( my_vertices.find( its->first ) != my_vertices.end() )
-    //   {
-    //     g[my_vertices[its->first]].updateExtraData(
-    //       set_vertex_data( its->second )
-    //     );
-    //   }
+        if ( my_vertices.find( its->first ) != my_vertices.end() )
+        {
+            g[my_vertices[its->first]].updateExtraData(
+                set_vertex_data( its->second )
+            );
+        }
 
-    // }
+    }
 
 }
 
