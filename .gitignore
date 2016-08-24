@@ -15,8 +15,6 @@
 *.sm
 *.dSYM/
 *.o
-*.png
-*.mp4
 
 # Ignore macOS spotlight files
 .DS_Store
