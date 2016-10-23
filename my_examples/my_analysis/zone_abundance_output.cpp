@@ -39,6 +39,7 @@
 
 int Counter;
 std::ofstream parameter_out;
+std::ofstream all_out;
 char* outdir;
 //##############################################################################
 // create_graph().
@@ -54,11 +55,13 @@ create_data(
     // std::string base = "dat_files";
 
 
-    char s_output[100];
-    snprintf(s_output, sizeof s_output, "%s/abund_%05d.dat", outdir,Counter);
+    char s_output[100], all_output[100];
+    snprintf(s_output, sizeof s_output, "%s/abund_%05d.dat", outdir, Counter);
+    snprintf(all_output, sizeof all_output, "all_abund_%05d.dat", Counter);
 
-    std::ofstream my_out;
+    std::ofstream my_out, all_out;
     my_out.open( s_output );
+    all_out.open( all_output );
     Counter++;
 
     nnt::species_list_t species_list =
@@ -101,6 +104,10 @@ create_data(
         m_total_sum += d_y * i_a;
         total_sum += d_y;
 
+        char as[1000];
+        snprintf(as, sizeof as, "%5d %5d %10.2e\n", i_z, i_n, d_y);
+        all_out << as;
+
         a_abund_tmp[i_a] += d_y;
         z_abund_tmp[i_z] += d_y;
         n_abund_tmp[i_n] += d_y;
@@ -114,6 +121,7 @@ create_data(
     }
 
     my_out.close();
+    all_out.close();
 
 }
 
@@ -167,7 +175,7 @@ main( int argc, char **argv )
             NULL,
             argv[3]
         );
-	outdir=argv[5];
+    outdir = argv[5];
     //============================================================================
     // Get subgraph view.
     //============================================================================

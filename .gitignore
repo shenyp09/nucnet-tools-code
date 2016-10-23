@@ -13,7 +13,7 @@
 # Ignore files with extension ...
 *.class
 *.sm
-*.dSYM/
+*.dSYM
 *.o
 *.png
 *.mp4

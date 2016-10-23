@@ -39,6 +39,8 @@
 #define D_BASE  120.
 #define D_SCALE 10
 
+Libnucnet__Nuc * p_nuc;
+
 //##############################################################################
 // The vertex writer.
 //##############################################################################
@@ -50,16 +52,84 @@ struct
     template <class Vertex>
     void operator()( std::ostream& out, Vertex v )
     {
+        Libnucnet__Species * p_sep, * p_species2;
         int i_z = Libnucnet__Species__getZ( g[v].getNucnetSpecies() );
+
         int i_n = Libnucnet__Species__getA( g[v].getNucnetSpecies() ) - i_z;
+
+        int i_a = Libnucnet__Species__getA( g[v].getNucnetSpecies() );
+
+        int i_z2 = i_z - 1;
+
+        int i_a2 = i_a - 1;
+
+        if ( ( i_z2 > 0 && i_a2 > 0 ) or ( i_z2 == 0 && i_a2 == 1 ) )
+        {
+            p_species2 =
+                Libnucnet__Nuc__getSpeciesByZA(
+                    p_nuc,
+                    i_z2,
+                    i_a2,
+                    ""
+                );
+        }
+        else
+        {
+            p_species2 = NULL;
+        }
+
+        double sep = 0.001;
+
+
+        if ( p_species2 )
+        {
+
+            sep = 7.28897 +
+                  Libnucnet__Species__getMassExcess( p_species2 ) -
+                  Libnucnet__Species__getMassExcess( g[v].getNucnetSpecies() );
+
+        }
+
+
+        i_z2 = i_z;
+
+        if ( ( i_z2 > 0 && i_a2 > 0 ) or ( i_z2 == 0 && i_a2 == 1 ) )
+        {
+            p_species2 =
+                Libnucnet__Nuc__getSpeciesByZA(
+                    p_nuc,
+                    i_z2,
+                    i_a2,
+                    ""
+                );
+        }
+        else
+        {
+            p_species2 = NULL;
+        }
+
+        double sen = 0.001;
+
+
+        if ( p_species2 )
+        {
+
+            sen = 8.07132 +
+                  Libnucnet__Species__getMassExcess( p_species2 ) -
+                  Libnucnet__Species__getMassExcess( g[v].getNucnetSpecies() );
+
+        }
+
+
+
         char * s_latex_string =
             Libnucnet__Species__createLatexString( g[v].getNucnetSpecies() );
         std::string style = "filled";
         double mex = Libnucnet__Species__getMassExcess(g[v].getNucnetSpecies());
-        if (mex < 0)
+        if (sep < 0 || sen < 0)
         {
             // printf("%s %f\n", Libnucnet__Species__getName(g[v].getNucnetSpecies()), mex);
-            // style = "invis";
+            style = "invis";
         }
         out <<
             boost::format(
@@ -250,6 +320,9 @@ main( int argc, char **argv )
 
     Libnucnet *p_my_nucnet;
     Libnucnet__NucView * p_nuc_view;
+
+
+    p_nuc = Libnucnet__Nuc__new_from_xml( "../../data_pub/my_net.xml", NULL );
 
     my_graph_t g;
 
